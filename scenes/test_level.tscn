@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://4klwniu6byip"]
+
+[ext_resource type="PackedScene" uid="uid://bpc7gobu6kj8j" path="res://scenes/rows.tscn" id="1_28k0w"]
+[ext_resource type="PackedScene" uid="uid://dglnpuqp6qfxp" path="res://scenes/room_purchasing_menu.tscn" id="2_orvbb"]
+
+[node name="test_level" type="Node2D"]
+
+[node name="Camera" type="Camera2D" parent="."]
+
+[node name="Row1" parent="." instance=ExtResource("1_28k0w")]
+position = Vector2(2, -130)
+scale = Vector2(1.8, 1.8)
+
+[node name="Row2" parent="." instance=ExtResource("1_28k0w")]
+position = Vector2(2, 0)
+scale = Vector2(1.8, 1.8)
+
+[node name="Row3" parent="." instance=ExtResource("1_28k0w")]
+position = Vector2(2, 129)
+scale = Vector2(1.8, 1.8)
+
+[node name="RoomPurchasingMenu" parent="." instance=ExtResource("2_orvbb")]
+position = Vector2(-190, -271)
+scale = Vector2(1.5, 1.5)

@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpc7gobu6kj8j"]
+
+[ext_resource type="Texture2D" uid="uid://dfmobuw3nku1p" path="res://sprites/rows.png" id="1_pi3pa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iw7il"]
+size = Vector2(60, 60)
+
+[node name="Rows" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pi3pa")
+
+[node name="Area1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area1"]
+position = Vector2(-222, 1)
+shape = SubResource("RectangleShape2D_iw7il")
+
+[node name="Area2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2"]
+position = Vector2(-148, 1)
+shape = SubResource("RectangleShape2D_iw7il")
+
+[node name="Area3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area3"]
+position = Vector2(-74, 1)
+shape = SubResource("RectangleShape2D_iw7il")
+
+[node name="Area4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area4"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_iw7il")
+
+[node name="Area5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area5"]
+position = Vector2(74, 1)
+shape = SubResource("RectangleShape2D_iw7il")
+
+[node name="Area6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area6"]
+position = Vector2(148, 1)
+shape = SubResource("RectangleShape2D_iw7il")
+
+[node name="Area7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area7"]
+position = Vector2(222, 1)
+shape = SubResource("RectangleShape2D_iw7il")
+
+[node name="hero_spawner" type="Marker2D" parent="."]
+position = Vector2(279, 0)
