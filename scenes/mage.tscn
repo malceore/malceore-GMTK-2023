@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c0hk51216d111" path="res://sprites/mage.png" id="2_2b8ic"]
 
 [node name="Character" instance=ExtResource("1_pwnox")]
+subtype = "mage"
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_2b8ic")
