@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://ki3mx5xgoc23" path="res://fonts/dungeon_crawler_cb.ttf" id="1_3phtm"]
 [ext_resource type="Script" path="res://scenes/startMenu.gd" id="1_7kgku"]
 [ext_resource type="Texture2D" uid="uid://dftowjd550ilf" path="res://sprites/background.png" id="2_8y8ks"]
-[ext_resource type="AudioStream" uid="uid://cgpsdmfa2sryo" path="res://sounds/DungeonIntroFinal.wav" id="2_e5afe"]
+[ext_resource type="AudioStream" uid="uid://dr54xvqrbqmuv" path="res://sounds/DungeonIntroFinal.wav" id="2_e5afe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqth6"]
 size = Vector2(1151, 648)

@@ -28,6 +28,15 @@ theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 20
 text = "Gold"
 
+[node name="Label" type="Label" parent="Slot1"]
+offset_left = -183.0
+offset_top = -35.0
+offset_right = -101.0
+offset_bottom = -12.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "Graveyard"
+
 [node name="Slot2" type="Area2D" parent="."]
 position = Vector2(75, 0)
 
@@ -43,6 +52,15 @@ offset_bottom = 45.0
 theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 20
 text = "Gold"
+
+[node name="Label" type="Label" parent="Slot2"]
+offset_left = -183.0
+offset_top = -35.0
+offset_right = -143.0
+offset_bottom = -12.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "Troll Cave"
 
 [node name="Slot3" type="Area2D" parent="."]
 position = Vector2(148, 0)
@@ -60,6 +78,15 @@ theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 20
 text = "Gold"
 
+[node name="Label" type="Label" parent="Slot3"]
+offset_left = -183.0
+offset_top = -35.0
+offset_right = -143.0
+offset_bottom = -12.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "MagicTower"
+
 [node name="Slot4" type="Area2D" parent="."]
 position = Vector2(222, 0)
 
@@ -75,6 +102,15 @@ offset_bottom = 45.0
 theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 20
 text = "Gold"
+
+[node name="Label" type="Label" parent="Slot4"]
+offset_left = -183.0
+offset_top = -35.0
+offset_right = -143.0
+offset_bottom = -12.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "Spider Nest"
 
 [node name="Slot5" type="Area2D" parent="."]
 position = Vector2(296, 0)
@@ -92,6 +128,15 @@ theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 20
 text = "Gold"
 
+[node name="Label" type="Label" parent="Slot5"]
+offset_left = -183.0
+offset_top = -35.0
+offset_right = -125.0
+offset_bottom = -12.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "Labyrinth"
+
 [node name="Slot6" type="Area2D" parent="."]
 position = Vector2(371, 0)
 
@@ -107,6 +152,15 @@ offset_bottom = 45.0
 theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 20
 text = "Gold"
+
+[node name="Label" type="Label" parent="Slot6"]
+offset_left = -183.0
+offset_top = -35.0
+offset_right = -130.0
+offset_bottom = -12.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "Goldmine"
 
 [node name="GoldLabel" type="Label" parent="."]
 offset_left = -246.0
