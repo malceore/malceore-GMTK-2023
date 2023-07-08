@@ -24,7 +24,8 @@ func _on_timer_timeout() -> void:
 func timedAffect():
 	if name == "crypt":
 		var monster = monsters["zombie"].instantiate()
-		self.add_child(monster)
+		self.get_parent().get_parent().add_child(monster)
+		monster.global_position = global_position
 	if name == "cave":		
 		var monster = monsters["troll"].instantiate()
 		self.add_child(monster)
