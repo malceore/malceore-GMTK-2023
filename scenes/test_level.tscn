@@ -48,6 +48,7 @@ position = Vector2(-28, 0)
 shape = SubResource("RectangleShape2D_j8af6")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
 
 [connection signal="money_update" from="." to="." method="_on_money_update"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

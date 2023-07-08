@@ -22,3 +22,21 @@ func _on_area_clicked(event, name):
 func _on_area_1_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed():
 		_on_area_clicked(event, "Area1")
+func _on_area_2_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.is_pressed():
+		_on_area_clicked(event, "Area2")
+func _on_area_3_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.is_pressed():
+		_on_area_clicked(event, "Area3")
+func _on_area_4_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.is_pressed():
+		_on_area_clicked(event, "Area4")
+func _on_area_5_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.is_pressed():
+		_on_area_clicked(event, "Area5")
+func _on_area_6_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.is_pressed():
+		_on_area_clicked(event, "Area6")
+func _on_area_7_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.is_pressed():
+		_on_area_clicked(event, "Area7")
