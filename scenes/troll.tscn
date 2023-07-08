@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://corb5xdci1bsn"]
+[gd_scene load_steps=3 format=3 uid="uid://corb5xdci1bsn"]
 
 [ext_resource type="PackedScene" uid="uid://cj1hij85eajf6" path="res://scenes/monster.tscn" id="1_shruw"]
+[ext_resource type="Texture2D" uid="uid://b0xryhnej0xji" path="res://sprites/troll.png" id="2_7ypmj"]
 
 [node name="Character" instance=ExtResource("1_shruw")]
 subtype = "troll"
+max_health = 200
+current_health = 200
+damage = 50
+move_speed = 0
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_7ypmj")

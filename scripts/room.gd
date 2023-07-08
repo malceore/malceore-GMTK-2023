@@ -1,11 +1,18 @@
 extends Node2D
 
+
+var monsters = {
+	"zombie": preload("res://scenes/zombie.tscn"),
+	"troll": preload("res://scenes/troll.tscn")
+}
+
 @export var cost = 10
 @export var secondsBetweenInterval = 0
 var enabled = false
 
-func _process(delta):
-	if enabled and secondsBetweenInterval > 0:
+func enable():
+	enabled = true
+	if secondsBetweenInterval > 0:
 		$Timer.wait_time = secondsBetweenInterval
 		$Timer.start()
 
@@ -15,9 +22,11 @@ func _on_timer_timeout() -> void:
 
 func timedAffect():
 	if name == "crypt":
-		print("Spawn a zombie!")
-	if name == "cave":
-		print("Spawn a troll!")
+		var monster = monsters["zombie"].instantiate()
+		self.add_child(monster)
+	if name == "cave":		
+		var monster = monsters["troll"].instantiate()
+		self.add_child(monster)
 
 func _on_affect_radius_area_entered(area):
 	if enabled:
