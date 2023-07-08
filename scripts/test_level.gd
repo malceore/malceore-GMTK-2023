@@ -18,7 +18,7 @@ func _on_button_pressed():
 
 func spawn_hero():
 	var hero_instance = hero.instantiate()
-	hero_instance.set_type("mage")
+	hero_instance.set_subtype("mage")
 	add_child(hero_instance)
 
 
