@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://4klwniu6byip"]
+[gd_scene load_steps=7 format=3 uid="uid://4klwniu6byip"]
 
 [ext_resource type="PackedScene" uid="uid://bpc7gobu6kj8j" path="res://scenes/rows.tscn" id="1_28k0w"]
 [ext_resource type="Script" path="res://scripts/test_level.gd" id="1_vlejl"]
 [ext_resource type="PackedScene" uid="uid://dglnpuqp6qfxp" path="res://scenes/room_purchasing_menu.tscn" id="2_orvbb"]
+[ext_resource type="FontFile" uid="uid://ki3mx5xgoc23" path="res://fonts/dungeon_crawler_cb.ttf" id="4_vktw7"]
 
 [sub_resource type="MeshTexture" id="MeshTexture_lkakn"]
 
@@ -35,6 +36,7 @@ offset_left = 521.0
 offset_top = 286.0
 offset_right = 569.0
 offset_bottom = 317.0
+theme_override_fonts/font = ExtResource("4_vktw7")
 text = "Start"
 icon = SubResource("MeshTexture_lkakn")
 
