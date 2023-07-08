@@ -1,25 +1,48 @@
 extends Node2D
 
-signal money_update(amount)
-
+@export var startingGold = 0
+@export var heroRate = 3
+@export var numberOfRows = 2
+@onready var spawn_point_array = []
 var hero_array = [preload("res://scenes/fighter.tscn"),
 				  preload("res://scenes/mage.tscn"),
 				  preload("res://scenes/rogue.tscn")]
+signal money_update(amount)
+var rng = RandomNumberGenerator.new()
 var heldRoom = null
 var holdingRoom = false
 
-@onready var spawn_point_array = [$Row1/hero_spawner.global_position,
-						 		  $Row2/hero_spawner.global_position,
-						 		  $Row3/hero_spawner.global_position]
+func _ready():
+	# Iterate over and disable rows not needed.
+	for child in self.get_children():
+		if "Row" in child.name and numberOfRows > 0:
+			child.visible = true
+			spawn_point_array.append(child.find_child("hero_spawner").global_position)
+			numberOfRows -= 1
+	
+	$LevelLabel.set_text(self.name)
+	$RoomPurchasingMenu.currentGold = startingGold
+	# Time it takes for players to read our message
+	$DelayTimer.wait_time = 10
+	$DelayTimer.one_shot = true
+	$DelayTimer.start()
 
-var rng = RandomNumberGenerator.new()
+func startHeroWave():
+	$HeroWaveTimer.wait_time = heroRate
+	$HeroWaveTimer.one_shot = false
+	$HeroWaveTimer.start()
+	print("waves started")
 
 func _on_button_pressed():
-	$Timer.start()
+	startHeroWave()
+	
+func _on_delay_timer_timeout():
+	startHeroWave()
 
-func spawn_hero():
+func _on_timer_timeout():
 	var hero_instance = hero_array[rng.randi_range(0,2)].instantiate()
-	hero_instance.global_position = spawn_point_array[rng.randi_range(0,2)]
+	var spawner_count = spawn_point_array.size() - 1
+	hero_instance.global_position = spawn_point_array[rng.randi_range(0,spawner_count)]
 	hero_instance.get_node("Sprite2D").position.y += rng.randi_range(-20,20)
 	add_child(hero_instance)
 
@@ -30,6 +53,3 @@ func _on_area_2d_body_entered(body):
 func _on_money_update(amount):
 	print("signal")
 	$RoomPurchasingMenu.currentGold += amount
-
-func _on_timer_timeout():
-	spawn_hero()
