@@ -3,7 +3,8 @@ extends Node2D
 
 var monsters = {
 	"zombie": preload("res://scenes/zombie.tscn"),
-	"troll": preload("res://scenes/troll.tscn")
+	"troll": preload("res://scenes/troll.tscn"),
+	"bolt": preload("res://scenes/bolt.tscn")
 }
 
 @export var cost = 10
@@ -27,6 +28,10 @@ func timedAffect():
 	if name == "cave":		
 		var monster = monsters["troll"].instantiate()
 		self.add_child(monster)
+	if name == "tower":
+		var projectile = monsters["bolt"].instantiate()
+		self.add_child(projectile)
+		projectile.fire()
 
 func _on_affect_radius_area_entered(area):
 	if enabled:

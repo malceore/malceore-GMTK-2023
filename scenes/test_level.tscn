@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://4klwniu6byip"]
+[gd_scene load_steps=9 format=3 uid="uid://4klwniu6byip"]
 
 [ext_resource type="PackedScene" uid="uid://bpc7gobu6kj8j" path="res://scenes/rows.tscn" id="1_28k0w"]
 [ext_resource type="Script" path="res://scripts/test_level.gd" id="1_vlejl"]
+[ext_resource type="Texture2D" uid="uid://dftowjd550ilf" path="res://sprites/background.png" id="2_3byw7"]
 [ext_resource type="PackedScene" uid="uid://dglnpuqp6qfxp" path="res://scenes/room_purchasing_menu.tscn" id="2_orvbb"]
 [ext_resource type="FontFile" uid="uid://ki3mx5xgoc23" path="res://fonts/dungeon_crawler_cb.ttf" id="4_vktw7"]
+[ext_resource type="AudioStream" uid="uid://d0ewgtnx58xai" path="res://sounds/DungeonLoopFinal.wav" id="5_5c0d2"]
 
 [sub_resource type="MeshTexture" id="MeshTexture_lkakn"]
 
@@ -12,6 +14,9 @@ size = Vector2(76, 386)
 
 [node name="test_level" type="Node2D"]
 script = ExtResource("1_vlejl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_3byw7")
 
 [node name="Camera" type="Camera2D" parent="."]
 
@@ -50,6 +55,9 @@ shape = SubResource("RectangleShape2D_j8af6")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_5c0d2")
 
 [connection signal="money_update" from="." to="." method="_on_money_update"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

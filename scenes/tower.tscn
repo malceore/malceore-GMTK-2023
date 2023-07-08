@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b7g0qv5aqqv8r" path="res://sprites/tower.png" id="2_k5vtm"]
 
 [node name="tower" instance=ExtResource("1_1s477")]
+secondsBetweenInterval = 2
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_k5vtm")
