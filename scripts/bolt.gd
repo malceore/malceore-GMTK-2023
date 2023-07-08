@@ -3,6 +3,7 @@ extends Node2D
 var enabled = false
 @export var move_speed = 200
 @export var direction = 1
+@export var damage = 10
 
 func fire():
 	enabled = true
