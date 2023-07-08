@@ -23,6 +23,7 @@ func _process(delta):
 	position.x = position.x + (move_speed * direction) * delta
 
 func escape():
+	get_parent().money_update.emit(-1)
 	queue_free()
 	
 func set_subtype(new_subtype):
