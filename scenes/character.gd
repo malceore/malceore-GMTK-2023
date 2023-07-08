@@ -16,13 +16,16 @@ var coin = preload("res://scenes/coin.tscn")
 @export var move_speed = 65
 @export var direction = 1
 
+var attack_ready = false
+
 var enemies_in_range = []
 
 
 func _process(delta):
 	if(enemies_in_range.size() == 0):
 		position.x = position.x + (move_speed * direction) * delta
-	else:
+	elif attack_ready:
+		attack_ready = false
 		attack_enemy()
 
 func attack_enemy():
@@ -52,3 +55,7 @@ func _on_attack_area_body_exited(body):
 	var enemy_position = enemies_in_range.find(body)
 	if enemy_position > -1:
 		enemies_in_range.remove_at(enemy_position)
+
+
+func _on_timer_timeout():
+	attack_ready = true
