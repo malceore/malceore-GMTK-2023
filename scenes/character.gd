@@ -43,13 +43,12 @@ func take_damage(damageAmount):
 		queue_free()
 
 
-
-func _on_attack_range_body_entered(body):
+func _on_attack_area_body_entered(body):
 	if body.type != null && body.type != type:
 		enemies_in_range.append(body)
 
 
-func _on_attack_range_body_exited(body):
+func _on_attack_area_body_exited(body):
 	var enemy_position = enemies_in_range.find(body)
 	if enemy_position > -1:
 		enemies_in_range.remove_at(enemy_position)

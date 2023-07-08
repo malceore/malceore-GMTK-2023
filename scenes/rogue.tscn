@@ -1,10 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dagephx2qj4an"]
+[gd_scene load_steps=4 format=3 uid="uid://dagephx2qj4an"]
 
 [ext_resource type="PackedScene" uid="uid://vyce285ucttd" path="res://scenes/hero.tscn" id="1_a7nj4"]
 [ext_resource type="Texture2D" uid="uid://yhwnnt0ron5f" path="res://sprites/thief.png" id="2_xi7po"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1yhe"]
+size = Vector2(114, 65)
 
 [node name="Character" instance=ExtResource("1_a7nj4")]
 subtype = "rogue"
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_xi7po")
+
+[node name="AttackRange" type="Area2D" parent="." index="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" index="0"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_y1yhe")
+
+[connection signal="body_entered" from="AttackRange" to="." method="_on_attack_range_body_entered" flags=18]
+[connection signal="body_exited" from="AttackRange" to="." method="_on_attack_range_body_exited" flags=18]
