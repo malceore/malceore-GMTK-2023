@@ -8,3 +8,6 @@ subtype = "mage"
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_2b8ic")
+
+[node name="Timer" parent="." index="3"]
+wait_time = 1.0
