@@ -22,7 +22,9 @@ func _process(delta):
 func escape():
 	queue_free()
 	
-func takeDamage(damage):
+func take_damage(damage):
 	current_health -= damage
 	if current_health <= 0 and spawns_coin:
+		var coin_instance = coin.instantiate()
+		get_parent().add_child(coin_instance)		
 		queue_free()
