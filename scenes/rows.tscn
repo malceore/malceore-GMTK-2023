@@ -58,3 +58,9 @@ shape = SubResource("RectangleShape2D_iw7il")
 position = Vector2(279, 0)
 
 [connection signal="input_event" from="Area1" to="." method="_on_area_1_input_event"]
+[connection signal="input_event" from="Area2" to="." method="_on_area_2_input_event"]
+[connection signal="input_event" from="Area3" to="." method="_on_area_3_input_event"]
+[connection signal="input_event" from="Area4" to="." method="_on_area_4_input_event"]
+[connection signal="input_event" from="Area5" to="." method="_on_area_5_input_event"]
+[connection signal="input_event" from="Area6" to="." method="_on_area_6_input_event"]
+[connection signal="input_event" from="Area7" to="." method="_on_area_7_input_event"]

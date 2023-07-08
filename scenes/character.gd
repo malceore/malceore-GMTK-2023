@@ -1,8 +1,6 @@
 extends CharacterBody2D
 
 var coin = preload("res://scenes/coin.tscn")
-var fighter_texture = preload("res://sprites/fighter.png")
-var mage_texture = preload("res://sprites/mage.png")
 
 @export var type = "hero"
 @export var subtype = "warrior"
@@ -25,13 +23,6 @@ func _process(delta):
 func escape():
 	get_parent().money_update.emit(-1)
 	queue_free()
-	
-func set_subtype(new_subtype):
-	subtype = new_subtype
-	if new_subtype == "fighter":
-		$Sprite2D.texture = fighter_texture
-	elif new_subtype == "mage":
-		$Sprite2D.texture = mage_texture
 
 func take_damage(damage):
 	current_health -= damage

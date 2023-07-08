@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dagephx2qj4an"]
+
+[ext_resource type="PackedScene" uid="uid://vyce285ucttd" path="res://scenes/hero.tscn" id="1_a7nj4"]
+
+[node name="Character" instance=ExtResource("1_a7nj4")]
