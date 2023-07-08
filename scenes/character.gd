@@ -16,3 +16,6 @@ extends CharacterBody2D
 
 func _process(delta):
 	position.x = position.x + (move_speed * direction) * delta
+
+func escape():
+	queue_free()
