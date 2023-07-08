@@ -1,5 +1,11 @@
 extends Node2D
 
+
+var monsters = {
+	"zombie": preload("res://scenes/zombie.tscn"),
+	"troll": preload("res://scenes/troll.tscn")
+}
+
 @export var cost = 10
 @export var secondsBetweenInterval = 0
 var enabled = false
