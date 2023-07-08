@@ -1,12 +1,5 @@
 extends Node2D
 
-var rooms = {
-	"default": preload("res://scenes/room.tscn"),
-	"cave": preload("res://scenes/cave.tscn"),
-	"crypt": preload("res://scenes/crypt.tscn"),
-	"tower": preload("res://scenes/tower.tscn")
-}
-
 @export var currentGold = 10
 @export var costsAndContentsOfSlots = [
 	{"cost": 1, "room": "crypt"}, 
@@ -16,6 +9,12 @@ var rooms = {
 	{"cost": 0, "room": ""}, 
 	{"cost": 0, "room": ""}
 ]
+var rooms = {
+	"default": preload("res://scenes/room.tscn"),
+	"cave": preload("res://scenes/cave.tscn"),
+	"crypt": preload("res://scenes/crypt.tscn"),
+	"tower": preload("res://scenes/tower.tscn")
+}
 var slots = {}
 
 func _ready():
