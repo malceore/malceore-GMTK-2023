@@ -23,13 +23,14 @@ func _process(delta):
 	position.x = position.x + (move_speed * direction) * delta
 
 func escape():
+	get_parent().money_update.emit(-1)
 	queue_free()
 	
-func set_type(new_type):
-	type = new_type
-	if new_type == "fighter":
+func set_subtype(new_subtype):
+	subtype = new_subtype
+	if new_subtype == "fighter":
 		$Sprite2D.texture = fighter_texture
-	elif new_type == "mage":
+	elif new_subtype == "mage":
 		$Sprite2D.texture = mage_texture
 
 func take_damage(damage):

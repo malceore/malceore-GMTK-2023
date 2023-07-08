@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg36b71jm4mje"
-path="res://.godot/imported/thief.png-20ef502fff845ea41e5bc44e84792ca6.ctex"
+uid="uid://03j6w867385c"
+path="res://.godot/imported/cave.png-d2b20dbca6ffe2ec62c0fa0dc5008372.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/thief.png"
-dest_files=["res://.godot/imported/thief.png-20ef502fff845ea41e5bc44e84792ca6.ctex"]
+source_file="res://sprites/cave.png"
+dest_files=["res://.godot/imported/cave.png-d2b20dbca6ffe2ec62c0fa0dc5008372.ctex"]
 
 [params]
 

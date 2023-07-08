@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg36b71jm4mje"
-path="res://.godot/imported/thief.png-20ef502fff845ea41e5bc44e84792ca6.ctex"
+uid="uid://1u8ghjj1ky44"
+path="res://.godot/imported/crypt.png-c12861b92b96190986c1bd2f6d2fdc5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/thief.png"
-dest_files=["res://.godot/imported/thief.png-20ef502fff845ea41e5bc44e84792ca6.ctex"]
+source_file="res://sprites/crypt.png"
+dest_files=["res://.godot/imported/crypt.png-c12861b92b96190986c1bd2f6d2fdc5a.ctex"]
 
 [params]
 
