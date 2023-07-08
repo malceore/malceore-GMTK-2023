@@ -118,3 +118,5 @@ theme_override_font_sizes/font_size = 20
 text = "Gold"
 
 [connection signal="input_event" from="Slot1" to="." method="_on_slot_1_input_event"]
+[connection signal="input_event" from="Slot2" to="." method="_on_slot_2_input_event"]
+[connection signal="input_event" from="Slot3" to="." method="_on_slot_3_input_event"]
