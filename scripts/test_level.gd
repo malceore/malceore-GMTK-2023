@@ -2,7 +2,9 @@ extends Node2D
 
 signal money_update(amount)
 
-var hero = preload("res://scenes/hero.tscn")
+var hero_array = [preload("res://scenes/fighter.tscn"),
+				  preload("res://scenes/mage.tscn"),
+				  preload("res://scenes/rogue.tscn")]
 var heldRoom = null
 var holdingRoom = false
 
@@ -17,9 +19,8 @@ func _on_button_pressed():
 
 
 func spawn_hero():
-	var hero_instance = hero.instantiate()
+	var hero_instance = hero_array[rng.randi_range(0,2)].instantiate()
 	hero_instance.global_position = spawn_point_array[rng.randi_range(0,2)]
-	hero_instance.set_subtype("mage")
 	add_child(hero_instance)
 
 
