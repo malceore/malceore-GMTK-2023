@@ -3,13 +3,14 @@ extends Node2D
 signal money_update(amount)
 
 var hero = preload("res://scenes/hero.tscn")
+var heldRoom = null
+var holdingRoom = false
 
 func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
 	pass
-
 
 func _on_button_pressed():
 	var hero_instance = hero.instantiate()

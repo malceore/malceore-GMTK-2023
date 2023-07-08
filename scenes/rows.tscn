@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpc7gobu6kj8j"]
+[gd_scene load_steps=4 format=3 uid="uid://bpc7gobu6kj8j"]
 
+[ext_resource type="Script" path="res://scripts/rows.gd" id="1_fjvld"]
 [ext_resource type="Texture2D" uid="uid://dfmobuw3nku1p" path="res://sprites/rows.png" id="1_pi3pa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iw7il"]
 size = Vector2(60, 60)
 
 [node name="Rows" type="Node2D"]
+script = ExtResource("1_fjvld")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_pi3pa")
@@ -54,3 +56,5 @@ shape = SubResource("RectangleShape2D_iw7il")
 
 [node name="hero_spawner" type="Marker2D" parent="."]
 position = Vector2(279, 0)
+
+[connection signal="input_event" from="Area1" to="." method="_on_area_1_input_event"]

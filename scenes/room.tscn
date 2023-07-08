@@ -19,3 +19,9 @@ texture = ExtResource("2_hdcli")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AffectRadius"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_36s6q")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="AffectRadius" to="." method="_on_affect_radius_area_entered"]
+[connection signal="area_exited" from="AffectRadius" to="." method="_on_affect_radius_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

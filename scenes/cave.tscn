@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi1r054y62lm8"]
+
+[ext_resource type="PackedScene" uid="uid://dsxydsnqkdkqq" path="res://scenes/room.tscn" id="1_dx3pu"]
+[ext_resource type="Texture2D" uid="uid://03j6w867385c" path="res://sprites/cave.png" id="2_w1nni"]
+
+[node name="cave" instance=ExtResource("1_dx3pu")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_w1nni")
