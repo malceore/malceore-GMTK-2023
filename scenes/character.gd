@@ -35,10 +35,13 @@ func escape():
 
 func take_damage(damageAmount):
 	current_health -= damageAmount
-	if current_health <= 0 and spawns_coin:
-		var coin_instance = coin.instantiate()
-		get_parent().add_child(coin_instance)	
-	queue_free()
+	if current_health <= 0:
+		if spawns_coin:
+			var coin_instance = coin.instantiate()
+			coin_instance.global_position = global_position
+			get_parent().add_child(coin_instance)
+		queue_free()
+
 
 
 func _on_attack_range_body_entered(body):
