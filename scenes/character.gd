@@ -1,8 +1,11 @@
 extends CharacterBody2D
 
 var coin = preload("res://scenes/coin.tscn")
+var fighter_texture = preload("res://sprites/fighter.png")
+var mage_texture = preload("res://sprites/mage.png")
 
 @export var type = "hero"
+@export var subtype = "warrior"
 @export var spawns_coin = false
 
 @export var max_health = 100
@@ -22,6 +25,13 @@ func _process(delta):
 func escape():
 	queue_free()
 	
+func set_type(new_type):
+	type = new_type
+	if new_type == "fighter":
+		$Sprite2D.texture = fighter_texture
+	elif new_type == "mage":
+		$Sprite2D.texture = mage_texture
+
 func take_damage(damage):
 	current_health -= damage
 	if current_health <= 0 and spawns_coin:
