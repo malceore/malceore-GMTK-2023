@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=3 uid="uid://dglnpuqp6qfxp"]
+
+[ext_resource type="Script" path="res://scripts/room_purchasing_menu.gd" id="1_7s3hv"]
+[ext_resource type="Texture2D" uid="uid://1k6puiw5ybex" path="res://sprites/roomPurchasingMenu.png" id="1_pv7j0"]
+[ext_resource type="FontFile" uid="uid://ki3mx5xgoc23" path="res://fonts/dungeon_crawler_cb.ttf" id="2_c7di3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swbdu"]
+size = Vector2(71, 65)
+
+[node name="RoomPurchasingMenu" type="Node2D"]
+script = ExtResource("1_7s3hv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pv7j0")
+
+[node name="Slot1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot1"]
+position = Vector2(-149, -3)
+shape = SubResource("RectangleShape2D_swbdu")
+
+[node name="CostLabel" type="Label" parent="Slot1"]
+offset_left = -172.0
+offset_top = 16.0
+offset_right = -113.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 20
+text = "Gold"
+
+[node name="Slot2" type="Area2D" parent="."]
+position = Vector2(75, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot2"]
+position = Vector2(-149, -3)
+shape = SubResource("RectangleShape2D_swbdu")
+
+[node name="CostLabel" type="Label" parent="Slot2"]
+offset_left = -175.0
+offset_top = 16.0
+offset_right = -116.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 20
+text = "Gold"
+
+[node name="Slot3" type="Area2D" parent="."]
+position = Vector2(148, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot3"]
+position = Vector2(-149, -3)
+shape = SubResource("RectangleShape2D_swbdu")
+
+[node name="CostLabel" type="Label" parent="Slot3"]
+offset_left = -172.0
+offset_top = 16.0
+offset_right = -113.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 20
+text = "Gold"
+
+[node name="Slot4" type="Area2D" parent="."]
+position = Vector2(222, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot4"]
+position = Vector2(-149, -3)
+shape = SubResource("RectangleShape2D_swbdu")
+
+[node name="CostLabel" type="Label" parent="Slot4"]
+offset_left = -172.0
+offset_top = 16.0
+offset_right = -113.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 20
+text = "Gold"
+
+[node name="Slot5" type="Area2D" parent="."]
+position = Vector2(296, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot5"]
+position = Vector2(-149, -3)
+shape = SubResource("RectangleShape2D_swbdu")
+
+[node name="CostLabel" type="Label" parent="Slot5"]
+offset_left = -173.0
+offset_top = 16.0
+offset_right = -114.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 20
+text = "Gold"
+
+[node name="Slot6" type="Area2D" parent="."]
+position = Vector2(371, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot6"]
+position = Vector2(-149, -3)
+shape = SubResource("RectangleShape2D_swbdu")
+
+[node name="CostLabel" type="Label" parent="Slot6"]
+offset_left = -173.0
+offset_top = 16.0
+offset_right = -114.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 20
+text = "Gold"
+
+[node name="GoldLabel" type="Label" parent="."]
+offset_left = -246.0
+offset_top = 17.0
+offset_right = -187.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 20
+text = "Gold"
+
+[connection signal="input_event" from="Slot1" to="." method="_on_slot_1_input_event"]
+[connection signal="input_event" from="Slot2" to="." method="_on_slot_2_input_event"]
+[connection signal="input_event" from="Slot3" to="." method="_on_slot_3_input_event"]
