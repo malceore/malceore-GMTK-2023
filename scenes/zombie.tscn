@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://qvleuc54tl2p"]
+
+[ext_resource type="PackedScene" uid="uid://cj1hij85eajf6" path="res://scenes/monster.tscn" id="1_6s46t"]
+
+[node name="Character" instance=ExtResource("1_6s46t")]
+subtype = "zombie"

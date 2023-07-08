@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://fmr8ej6xbe35"]
+
+[ext_resource type="PackedScene" uid="uid://cj1hij85eajf6" path="res://scenes/monster.tscn" id="1_k0dix"]
+
+[node name="Character" instance=ExtResource("1_k0dix")]
+subtype = "spider"
