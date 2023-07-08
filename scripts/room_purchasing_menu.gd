@@ -42,3 +42,4 @@ func _on_slot_2_input_event(viewport, event, shape_idx):
 func _on_slot_3_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed():
 		_on_slot_clicked(event, "Slot2")
+
