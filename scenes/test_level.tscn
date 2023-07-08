@@ -36,6 +36,7 @@ offset_left = 521.0
 offset_top = 286.0
 offset_right = 569.0
 offset_bottom = 317.0
+scale = Vector2(1.00697, 1)
 theme_override_fonts/font = ExtResource("4_vktw7")
 text = "Start"
 icon = SubResource("MeshTexture_lkakn")
