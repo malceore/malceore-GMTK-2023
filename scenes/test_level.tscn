@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://4klwniu6byip"]
+[gd_scene load_steps=4 format=3 uid="uid://4klwniu6byip"]
 
 [ext_resource type="PackedScene" uid="uid://bpc7gobu6kj8j" path="res://scenes/rows.tscn" id="1_28k0w"]
 [ext_resource type="PackedScene" uid="uid://dglnpuqp6qfxp" path="res://scenes/room_purchasing_menu.tscn" id="2_orvbb"]
+[ext_resource type="PackedScene" uid="uid://bbphtv3kj2wkj" path="res://scenes/character.tscn" id="3_wg4ql"]
 
 [node name="test_level" type="Node2D"]
 
@@ -22,3 +23,6 @@ scale = Vector2(1.8, 1.8)
 [node name="RoomPurchasingMenu" parent="." instance=ExtResource("2_orvbb")]
 position = Vector2(-190, -271)
 scale = Vector2(1.5, 1.5)
+
+[node name="Character" parent="." instance=ExtResource("3_wg4ql")]
+position = Vector2(403, 0)
