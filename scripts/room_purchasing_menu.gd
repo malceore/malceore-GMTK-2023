@@ -3,7 +3,8 @@ extends Node2D
 var rooms = {
 	"default": preload("res://scenes/room.tscn"),
 	"cave": preload("res://scenes/cave.tscn"),
-	"crypt": preload("res://scenes/crypt.tscn")
+	"crypt": preload("res://scenes/crypt.tscn"),
+	"tower": preload("res://scenes/tower.tscn")
 }
 
 @export var currentGold = 10
