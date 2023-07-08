@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://1u8ghjj1ky44" path="res://sprites/crypt.png" id="2_xjhrh"]
 
 [node name="crypt" instance=ExtResource("1_1x14o")]
+secondsBetweenInterval = 3
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_xjhrh")
