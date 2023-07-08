@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbphtv3kj2wkj"]
+[gd_scene load_steps=7 format=3 uid="uid://bbphtv3kj2wkj"]
 
 [ext_resource type="Script" path="res://scenes/character.gd" id="1_j4pg4"]
 [ext_resource type="Texture2D" uid="uid://dpxgivgvhnpb" path="res://sprites/placeholder_man.png" id="1_j7phl"]
+[ext_resource type="AudioStream" uid="uid://cjaj1tra6hkmp" path="res://sounds/death.wav" id="3_widus"]
+[ext_resource type="AudioStream" uid="uid://q7qnwp5xlq5f" path="res://sounds/attack.wav" id="4_xrx20"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ko0n"]
 size = Vector2(65, 63)
@@ -24,6 +26,12 @@ shape = SubResource("RectangleShape2D_0ko0n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_y1yhe")
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_widus")
+
+[node name="Attack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_xrx20")
 
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
