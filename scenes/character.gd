@@ -13,7 +13,7 @@ var coin = preload("res://scenes/coin.tscn")
 @export var range = 0
 @export var attack_speed = 1
 
-@export var move_speed = 100
+@export var move_speed = 65
 @export var direction = 1
 
 var enemies_in_range = []

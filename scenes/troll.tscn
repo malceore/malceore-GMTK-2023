@@ -8,6 +8,7 @@ size = Vector2(114, 65)
 
 [node name="Character" instance=ExtResource("1_shruw")]
 subtype = "troll"
+move_speed = 25
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_7ypmj")
