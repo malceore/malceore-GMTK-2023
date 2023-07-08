@@ -5,6 +5,8 @@
 
 [node name="Character" instance=ExtResource("1_088pj")]
 subtype = "fighter"
+current_health = 1000
+damage = 100
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_l7l8e")
