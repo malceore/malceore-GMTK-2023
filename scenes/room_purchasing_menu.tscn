@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dglnpuqp6qfxp"]
+[gd_scene load_steps=5 format=3 uid="uid://dglnpuqp6qfxp"]
 
+[ext_resource type="Script" path="res://scripts/room_purchasing_menu.gd" id="1_7s3hv"]
 [ext_resource type="Texture2D" uid="uid://1k6puiw5ybex" path="res://sprites/roomPurchasingMenu.png" id="1_pv7j0"]
 [ext_resource type="FontFile" uid="uid://ki3mx5xgoc23" path="res://fonts/dungeon_crawler_cb.ttf" id="2_c7di3"]
 
@@ -7,6 +8,7 @@
 size = Vector2(71, 65)
 
 [node name="RoomPurchasingMenu" type="Node2D"]
+script = ExtResource("1_7s3hv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_pv7j0")
@@ -107,10 +109,12 @@ theme_override_font_sizes/font_size = 20
 text = "Gold"
 
 [node name="GoldLabel" type="Label" parent="."]
-offset_left = -252.0
-offset_top = 12.0
-offset_right = -193.0
-offset_bottom = 41.0
+offset_left = -246.0
+offset_top = 17.0
+offset_right = -187.0
+offset_bottom = 46.0
 theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 20
 text = "Gold"
+
+[connection signal="input_event" from="Slot1" to="." method="_on_slot_1_input_event"]

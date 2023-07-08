@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsxydsnqkdkqq"]
+
+[ext_resource type="Script" path="res://scripts/room.gd" id="1_qc646"]
+[ext_resource type="Texture2D" uid="uid://c4k0m3s5d73ik" path="res://sprites/placeholder_room.png" id="2_hdcli"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36s6q"]
+size = Vector2(64, 63)
+
+[node name="room" type="Node2D"]
+script = ExtResource("1_qc646")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hdcli")
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+
+[node name="AffectRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AffectRadius"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_36s6q")
