@@ -19,11 +19,11 @@ texture = ExtResource("1_j7phl")
 position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_0ko0n")
 
-[node name="AttackRange" type="Area2D" parent="."]
+[node name="AttackArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_y1yhe")
 
-[connection signal="body_entered" from="AttackRange" to="." method="_on_attack_range_body_entered"]
-[connection signal="body_exited" from="AttackRange" to="." method="_on_attack_range_body_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
