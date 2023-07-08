@@ -6,5 +6,5 @@ extends Node2D
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		get_parent().money_update.emit(1)
-		AudioListener2D
+		AudioStreamPlayback
 		queue_free()
