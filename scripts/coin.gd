@@ -1,5 +1,4 @@
-extends Sprite2D
-
+extends Node2D
 
 @export var coinValue = 1
 

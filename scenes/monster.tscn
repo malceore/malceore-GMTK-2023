@@ -4,3 +4,5 @@
 
 [node name="Character" instance=ExtResource("1_ybxvo")]
 type = "monster"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

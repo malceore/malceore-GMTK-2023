@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var coin = preload("res://scenes/coin.tscn")
+
 @export var type = "hero"
 @export var spawns_coin = false
 
@@ -19,3 +21,8 @@ func _process(delta):
 
 func escape():
 	queue_free()
+	
+func takeDamage(damage):
+	current_health -= damage
+	if current_health <= 0 and spawns_coin:
+		queue_free()
