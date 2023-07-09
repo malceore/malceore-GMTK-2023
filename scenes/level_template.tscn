@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://u662yy1q8uj5" path="res://sprites/gold_pile_1.png" id="4_biutf"]
 [ext_resource type="FontFile" uid="uid://ki3mx5xgoc23" path="res://fonts/dungeon_crawler_cb.ttf" id="4_vktw7"]
 [ext_resource type="AudioStream" uid="uid://d0ewgtnx58xai" path="res://sounds/DungeonLoopFinal.wav" id="5_5c0d2"]
-[ext_resource type="PackedScene" uid="uid://1wklhhflyqlj" path="res://scenes/draco_lich.tscn" id="8_ljrfs"]
+[ext_resource type="PackedScene" path="res://scenes/draco_lich.tscn" id="8_ljrfs"]
 
 [sub_resource type="MeshTexture" id="MeshTexture_lkakn"]
 

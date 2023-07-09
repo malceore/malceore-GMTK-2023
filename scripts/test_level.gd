@@ -36,7 +36,7 @@ func _ready():
 	get_node("/root/ScoreboardData").retryLevel = currentLevel
 
 func startHeroWave():
-	$HeroWaveTimer.wait_time = heroRate
+	$HeroWaveTimer.set_wait_time(heroRate)
 	$HeroWaveTimer.one_shot = false
 	$HeroWaveTimer.start()
 	$levelTimer.start()

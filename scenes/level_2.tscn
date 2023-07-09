@@ -1,10 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://dib2cnv1qxqyu"]
 
-[ext_resource type="PackedScene" uid="uid://4klwniu6byip" path="res://scenes/test_level.tscn" id="1_ma514"]
+[ext_resource type="PackedScene" uid="uid://4klwniu6byip" path="res://scenes/level_template.tscn" id="1_ma514"]
 
 [node name="Level 2" instance=ExtResource("1_ma514")]
 currentLevel = 2
-startingGold = 10
-heroRate = 2
+startingGold = 15
 numberOfRows = 3
 levelAnnouncementContents = "Watchout this dungeon has three rows to defend! Make sure to build enough Gold Mines."

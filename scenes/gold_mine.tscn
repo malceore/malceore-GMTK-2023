@@ -5,7 +5,7 @@
 
 [node name="Gold Mine" instance=ExtResource("1_hmtvv")]
 cost = 1
-secondsBetweenInterval = 3
+secondsBetweenInterval = 4
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_du0cp")
