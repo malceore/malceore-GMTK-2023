@@ -6,4 +6,4 @@
 startingGold = 10
 heroRate = 2
 numberOfRows = 3
-levelAnnouncementContents = "Watchout this dungeon has \\n three rows to defend! Make sure to build enough Gold Mines."
+levelAnnouncementContents = "Watchout this dungeon has three rows to defend! Make sure to build enough Gold Mines."

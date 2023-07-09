@@ -15,37 +15,43 @@ var coin = preload("res://scenes/coin.tscn")
 
 @export var move_speed = 65
 @export var direction = 1
+@export var greed = 1
 
 var enemies_in_range = []
 
 
 func _process(delta):
-	if(enemies_in_range.size() == 0):
+	if(enemies_in_range.size() == 0):	
+		$AnimationPlayer.play("walk")
 		position.x = position.x + (move_speed * direction) * delta
 
 func attack_enemy():
+	$AnimationPlayer.play("attack")
 	$Attack.play()
 	if enemies_in_range.size() != 0:
 		enemies_in_range[0].take_damage(damage)
 
 func escape():
-	get_parent().money_update.emit(-1)
+	get_parent().money_update.emit(-greed)
 	queue_free()
 
 func take_damage(damageAmount):
 	current_health -= damageAmount
 	if current_health <= 0:
-		if type == "hero":
-			get_node("/root/ScoreboardData").killCount += 1
-		if spawns_coin:
-			var coin_instance = coin.instantiate()
-			coin_instance.global_position = global_position
-			get_parent().add_child(coin_instance)
-			coin_instance.scale = Vector2(2, 2)
-		$Death.play()
-		await $Death.finished
-		queue_free()
+		die()
 
+func die():
+	if type == "hero":
+		get_node("/root/ScoreboardData").killCount += 1
+	if spawns_coin:
+		var coin_instance = coin.instantiate()
+		coin_instance.global_position = global_position
+		get_parent().add_child(coin_instance)
+		coin_instance.scale = Vector2(2, 2)
+	$AnimationPlayer.("death")
+	$Death.play()
+	await $Death.finished
+	queue_free()
 
 func _on_attack_area_body_entered(body):
 	if body.type != null && body.type != type:
