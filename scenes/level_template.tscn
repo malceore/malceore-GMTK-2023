@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://u662yy1q8uj5" path="res://sprites/gold_pile_1.png" id="4_biutf"]
 [ext_resource type="FontFile" uid="uid://ki3mx5xgoc23" path="res://fonts/dungeon_crawler_cb.ttf" id="4_vktw7"]
 [ext_resource type="AudioStream" uid="uid://d0ewgtnx58xai" path="res://sounds/DungeonLoopFinal.wav" id="5_5c0d2"]
-[ext_resource type="PackedScene" path="res://scenes/draco_lich.tscn" id="8_ljrfs"]
+[ext_resource type="PackedScene" uid="uid://1wklhhflyqlj" path="res://scenes/draco_lich.tscn" id="8_ljrfs"]
 
 [sub_resource type="MeshTexture" id="MeshTexture_lkakn"]
 
@@ -146,8 +146,8 @@ scale = Vector2(1.69147, 1.47354)
 [connection signal="money_update" from="." to="." method="_on_money_update"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="GoldCache" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="MonsterCleaner" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="MonsterCleaner" to="." method="_on_monster_cleaner_body_entered"]
+[connection signal="body_entered" from="MonsterCleaner" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="HeroWaveTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="DelayTimer" to="." method="_on_delay_timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

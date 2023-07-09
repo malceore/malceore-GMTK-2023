@@ -7,3 +7,4 @@ currentLevel = 3
 startingGold = 20
 numberOfRows = 4
 levelTime = 120
+levelAnnouncementContents = "Adventures drop gold, pick it up to gain advantage."

@@ -2,6 +2,8 @@ extends Node2D
 
 @export var coinValue = 1
 
+func _ready():
+	$Timer.start()
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed():
@@ -10,3 +12,6 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 		$AudioStreamPlayer.play()
 		await $AudioStreamPlayer.finished
 		queue_free()
+
+func _on_timer_timeout():
+	queue_free()
