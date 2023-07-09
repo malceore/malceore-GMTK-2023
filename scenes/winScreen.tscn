@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3allejo1tg28"]
+[gd_scene load_steps=3 format=3 uid="uid://b3allejo1tg28"]
 
 [ext_resource type="PackedScene" uid="uid://wbhiwvww8scm" path="res://scenes/endGameScreen.tscn" id="1_3afv3"]
+[ext_resource type="FontFile" uid="uid://ki3mx5xgoc23" path="res://fonts/dungeon_crawler_cb.ttf" id="2_rs502"]
 
 [node name="Node2D" instance=ExtResource("1_3afv3")]
 
@@ -8,4 +9,10 @@
 text = "VICTORY!"
 
 [node name="Subtitle" parent="StatsPanel" index="0"]
+theme_override_fonts/font = ExtResource("2_rs502")
+theme_override_font_sizes/font_size = 14
 text = "Congratulations!"
+
+[node name="EnemiesKilled" parent="StatsPanel" index="1"]
+theme_override_fonts/font = ExtResource("2_rs502")
+theme_override_font_sizes/font_size = 14
