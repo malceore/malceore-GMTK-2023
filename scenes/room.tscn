@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsxydsnqkdkqq"]
+[gd_scene load_steps=5 format=3 uid="uid://dsxydsnqkdkqq"]
 
 [ext_resource type="Script" path="res://scripts/room.gd" id="1_qc646"]
 [ext_resource type="Texture2D" uid="uid://c4k0m3s5d73ik" path="res://sprites/placeholder_room.png" id="2_hdcli"]
+[ext_resource type="FontFile" uid="uid://ki3mx5xgoc23" path="res://fonts/dungeon_crawler_cb.ttf" id="3_65o00"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_36s6q"]
 size = Vector2(64, 63)
 
 [node name="room" type="Node2D"]
+scale = Vector2(1, 1.00724)
 script = ExtResource("1_qc646")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -20,8 +22,30 @@ texture = ExtResource("2_hdcli")
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_36s6q")
 
+[node name="upgradeButton" type="Button" parent="."]
+visible = false
+offset_left = -32.0
+offset_top = -31.7699
+offset_right = -14.0
+offset_bottom = -0.769934
+scale = Vector2(0.477279, 0.27406)
+theme_override_fonts/font = ExtResource("3_65o00")
+text = "V"
+
+[node name="upgradeText" type="Button" parent="upgradeButton"]
+visible = false
+layout_mode = 0
+offset_top = 30.0
+offset_right = 148.0
+offset_bottom = 59.0
+theme_override_fonts/font = ExtResource("3_65o00")
+theme_override_font_sizes/font_size = 25
+text = "Upgrade:
+Upgrade Cost:"
+
 [node name="Timer" type="Timer" parent="."]
 
 [connection signal="area_entered" from="AffectRadius" to="." method="_on_affect_radius_area_entered"]
 [connection signal="area_exited" from="AffectRadius" to="." method="_on_affect_radius_area_exited"]
+[connection signal="pressed" from="upgradeButton" to="." method="_on_upgrade_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

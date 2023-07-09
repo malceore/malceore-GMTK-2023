@@ -57,3 +57,10 @@ func _on_affect_radius_area_exited(area):
 			area.get_parent().move_speed = area.get_parent().move_speed*2
 		if name == "Labyrinth" and area.get_parent().get("move_speed") != null:
 			area.get_parent().move_speed = area.get_parent().move_speed*4
+
+
+func _on_upgrade_button_pressed():
+	if !$upgradeButton/upgradeText.visible:
+		$upgradeButton/upgradeText.show()
+	else:
+		$upgradeButton/upgradeText.hide()
