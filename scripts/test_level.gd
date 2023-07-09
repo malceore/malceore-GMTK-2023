@@ -4,14 +4,10 @@ extends Node2D
 @export var heroRate = 3
 @export var numberOfRows = 2
 @export var levelTime = 90
+@export var levelAnnouncementContents = "
+Protect your gold from dungeon delving heroes by 
+constructing obstacles. Survive until time runs out!"
 @onready var spawn_point_array = []
-
-
-func countdown():
-	levelTime -= 1
-	$levelTimerLabel.text = "Time left \n" + str(levelTime)
-	if levelTime == 0:
-		print("TimeStop")
 
 var hero_array = [preload("res://scenes/fighter.tscn"),
 				  preload("res://scenes/mage.tscn"),
@@ -22,6 +18,7 @@ var heldRoom = null
 var holdingRoom = false
 
 func _ready():
+	$Popup/Label.text = levelAnnouncementContents
 	# Iterate over and disable rows not needed.
 	for child in self.get_children():
 		if "Row" in child.name and numberOfRows > 0:
@@ -69,4 +66,9 @@ func _on_monster_cleaner_body_entered(body):
 	if(body.type == "monster"):
 		body.queue_free()
 
+func countdown():
+	levelTime -= 1
+	$LevelTimerLabel.text = "Time left:\n" + str(levelTime)
+	if levelTime == 0:
+		print("TimeStop")
 
