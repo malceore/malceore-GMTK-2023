@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://o3dawm8gdqhr"]
+
+[ext_resource type="PackedScene" uid="uid://dsxydsnqkdkqq" path="res://scenes/room.tscn" id="1_w0od4"]
+[ext_resource type="Texture2D" uid="uid://cvf7f7nlib506" path="res://sprites/labyrinth.png" id="2_4cjvq"]
+
+[node name="Labyrinth" instance=ExtResource("1_w0od4")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_4cjvq")

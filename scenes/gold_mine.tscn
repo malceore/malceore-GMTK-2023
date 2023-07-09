@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwhfxmmevae4c"]
+[gd_scene load_steps=3 format=3 uid="uid://cwhfxmmevae4c"]
 
 [ext_resource type="PackedScene" uid="uid://dsxydsnqkdkqq" path="res://scenes/room.tscn" id="1_hmtvv"]
+[ext_resource type="Texture2D" uid="uid://c0icqbfdl8wou" path="res://sprites/gold_mine.png" id="2_du0cp"]
 
 [node name="Gold Mine" instance=ExtResource("1_hmtvv")]
+cost = 1
 secondsBetweenInterval = 3
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_du0cp")

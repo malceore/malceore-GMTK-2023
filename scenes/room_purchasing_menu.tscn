@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dglnpuqp6qfxp"]
+[gd_scene load_steps=13 format=3 uid="uid://dglnpuqp6qfxp"]
 
 [ext_resource type="Script" path="res://scripts/room_purchasing_menu.gd" id="1_7s3hv"]
 [ext_resource type="Texture2D" uid="uid://1k6puiw5ybex" path="res://sprites/roomPurchasingMenu.png" id="1_pv7j0"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://b7g0qv5aqqv8r" path="res://sprites/tower.png" id="6_tdwbp"]
 [ext_resource type="Texture2D" uid="uid://b2wdl3gpcggsg" path="res://sprites/spider_nest.png" id="7_i6ri8"]
 [ext_resource type="Texture2D" uid="uid://u662yy1q8uj5" path="res://sprites/gold_pile_1.png" id="8_4tq5m"]
+[ext_resource type="Texture2D" uid="uid://cvf7f7nlib506" path="res://sprites/labyrinth.png" id="8_my6k3"]
 [ext_resource type="AudioStream" uid="uid://dic2oyehgwl70" path="res://sounds/captialism.wav" id="8_t50hl"]
+[ext_resource type="Texture2D" uid="uid://c0icqbfdl8wou" path="res://sprites/gold_mine.png" id="9_kil5j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swbdu"]
 size = Vector2(71, 65)
@@ -49,6 +51,18 @@ theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 12
 text = "Graveyard"
 
+[node name="tooltip" type="Label" parent="Slot1"]
+visible = false
+offset_left = -184.0
+offset_top = 40.0
+offset_right = -11.0
+offset_bottom = 118.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "Spawns Zombies that 
+chew on heroes, every 
+4 seconds."
+
 [node name="Slot2" type="Area2D" parent="."]
 position = Vector2(75, 0)
 
@@ -78,6 +92,17 @@ text = "Troll Cave"
 position = Vector2(-148, -4)
 scale = Vector2(0.965, 0.549)
 texture = ExtResource("5_4omx6")
+
+[node name="tooltip" type="Label" parent="Slot2"]
+visible = false
+offset_left = -181.0
+offset_top = 40.0
+offset_right = -8.0
+offset_bottom = 118.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "Spawns hulking trolls 
+every 16 seconds."
 
 [node name="Slot3" type="Area2D" parent="."]
 position = Vector2(148, 0)
@@ -109,6 +134,17 @@ position = Vector2(-148, -4)
 scale = Vector2(0.965, 0.549)
 texture = ExtResource("6_tdwbp")
 
+[node name="tooltip" type="Label" parent="Slot3"]
+visible = false
+offset_left = -184.0
+offset_top = 40.0
+offset_right = -11.0
+offset_bottom = 118.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "Rapid fires thunderbolts
+that have weak damage."
+
 [node name="Slot4" type="Area2D" parent="."]
 position = Vector2(222, 0)
 
@@ -139,6 +175,19 @@ position = Vector2(-148, -4)
 scale = Vector2(0.965, 0.549)
 texture = ExtResource("7_i6ri8")
 
+[node name="tooltip" type="Label" parent="Slot4"]
+visible = false
+offset_left = -180.0
+offset_top = 40.0
+offset_right = 9.0
+offset_bottom = 118.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "Slows enemies by 1/2
+and infrequently 
+spawns man-eating 
+spiders."
+
 [node name="Slot5" type="Area2D" parent="."]
 position = Vector2(296, 0)
 
@@ -156,13 +205,30 @@ theme_override_font_sizes/font_size = 20
 text = "Gold"
 
 [node name="Label" type="Label" parent="Slot5"]
-offset_left = -183.0
-offset_top = -35.0
-offset_right = -125.0
-offset_bottom = -12.0
+offset_left = -179.0
+offset_top = -34.0
+offset_right = -121.0
+offset_bottom = -11.0
 theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 12
 text = "Labyrinth"
+
+[node name="Sprite2D" type="Sprite2D" parent="Slot5"]
+position = Vector2(-147, -5)
+scale = Vector2(0.929688, 0.460937)
+texture = ExtResource("8_my6k3")
+
+[node name="tooltip" type="Label" parent="Slot5"]
+visible = false
+offset_left = -185.0
+offset_top = 40.0
+offset_right = 4.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "Slows enemies by
+1/4th as they become
+lost."
 
 [node name="Slot6" type="Area2D" parent="."]
 position = Vector2(371, 0)
@@ -181,13 +247,29 @@ theme_override_font_sizes/font_size = 20
 text = "Gold"
 
 [node name="Label" type="Label" parent="Slot6"]
-offset_left = -183.0
-offset_top = -35.0
-offset_right = -130.0
-offset_bottom = -12.0
+offset_left = -175.0
+offset_top = -33.0
+offset_right = -122.0
+offset_bottom = -10.0
 theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 12
 text = "Goldmine"
+
+[node name="Sprite2D" type="Sprite2D" parent="Slot6"]
+position = Vector2(-150, -3)
+scale = Vector2(0.921875, 0.5)
+texture = ExtResource("9_kil5j")
+
+[node name="tooltip" type="Label" parent="Slot6"]
+visible = false
+offset_left = -186.0
+offset_top = 40.0
+offset_right = 3.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
+text = "Generates 1 gold piece
+a second."
 
 [node name="GoldLabel" type="Label" parent="."]
 offset_left = -246.0
@@ -205,6 +287,23 @@ texture = ExtResource("8_4tq5m")
 [node name="noMoney" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_t50hl")
 
+[connection signal="area_entered" from="Slot1" to="." method="_on_slot_1_area_entered"]
+[connection signal="area_exited" from="Slot1" to="." method="_on_slot_1_area_exited"]
 [connection signal="input_event" from="Slot1" to="." method="_on_slot_1_input_event"]
+[connection signal="mouse_entered" from="Slot1" to="." method="_on_slot_1_mouse_entered"]
+[connection signal="mouse_exited" from="Slot1" to="." method="_on_slot_1_mouse_exited"]
 [connection signal="input_event" from="Slot2" to="." method="_on_slot_2_input_event"]
+[connection signal="mouse_entered" from="Slot2" to="." method="_on_slot_2_mouse_entered"]
+[connection signal="mouse_exited" from="Slot2" to="." method="_on_slot_2_mouse_exited"]
 [connection signal="input_event" from="Slot3" to="." method="_on_slot_3_input_event"]
+[connection signal="mouse_entered" from="Slot3" to="." method="_on_slot_3_mouse_entered"]
+[connection signal="mouse_exited" from="Slot3" to="." method="_on_slot_3_mouse_exited"]
+[connection signal="input_event" from="Slot4" to="." method="_on_slot_4_input_event"]
+[connection signal="mouse_entered" from="Slot4" to="." method="_on_slot_4_mouse_entered"]
+[connection signal="mouse_exited" from="Slot4" to="." method="_on_slot_4_mouse_exited"]
+[connection signal="input_event" from="Slot5" to="." method="_on_slot_5_input_event"]
+[connection signal="mouse_entered" from="Slot5" to="." method="_on_slot_5_mouse_entered"]
+[connection signal="mouse_exited" from="Slot5" to="." method="_on_slot_5_mouse_exited"]
+[connection signal="input_event" from="Slot6" to="." method="_on_slot_6_input_event"]
+[connection signal="mouse_entered" from="Slot6" to="." method="_on_slot_6_mouse_entered"]
+[connection signal="mouse_exited" from="Slot6" to="." method="_on_slot_6_mouse_exited"]
