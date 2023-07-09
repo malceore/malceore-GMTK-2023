@@ -52,6 +52,8 @@ func _on_area_2d_body_entered(body):
 		
 func _on_money_update(amount):
 	$RoomPurchasingMenu.currentGold += amount
+	if($RoomPurchasingMenu.currentGold < 1):
+		get_tree().change_scene_to_file("res://scenes/endGameScreen.tscn")
 
 func _on_monster_cleaner_body_entered(body):
 	if(body.type == "monster"):

@@ -36,17 +36,12 @@ func timedAffect():
 		self.get_parent().get_parent().add_child(projectile)
 		projectile.global_position = global_position
 		projectile.fire()
-	if name == "Gold Mine":
-		self.get_parent().get_parent().money_update.emit(5)
-		print("Mining!")
 
 func _on_affect_radius_area_entered(area):
 	if enabled:
-		if name == "Spider Nest" and area.get_parent().get("move_speed") != null:
-			area.get_parent().move_speed = area.get_parent().move_speed/2
+		pass # Replace with function body.
 
 func _on_affect_radius_area_exited(area):
 	if enabled:
-		if name == "Spider Nest" and area.get_parent().get("move_speed") != null:
-			area.get_parent().move_speed = area.get_parent().move_speed*2
+		pass # Replace with function body.
 

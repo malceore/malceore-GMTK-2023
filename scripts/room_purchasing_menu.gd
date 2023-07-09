@@ -2,20 +2,18 @@ extends Node2D
 
 @export var currentGold = 10
 @export var costsAndContentsOfSlots = [
-	{"cost": 8, "room": "crypt"}, 
-	{"cost": 12, "room": "cave"}, 
-	{"cost": 6, "room": "tower"}, 
-	{"cost": 1, "room": "spider nest"}, 
-	{"cost": 0, "room": "labrynth"}, 
-	{"cost": 2, "room": "gold mine"}
+	{"cost": 1, "room": "crypt"}, 
+	{"cost": 3, "room": "cave"}, 
+	{"cost": 5, "room": "tower"}, 
+	{"cost": 0, "room": ""}, 
+	{"cost": 0, "room": ""}, 
+	{"cost": 0, "room": ""}
 ]
 var rooms = {
 	"default": preload("res://scenes/room.tscn"),
 	"cave": preload("res://scenes/cave.tscn"),
 	"crypt": preload("res://scenes/crypt.tscn"),
-	"tower": preload("res://scenes/tower.tscn"),
-	"spider nest": preload("res://scenes/spider_nest.tscn"),
-	"gold mine": preload("res://scenes/gold_mine.tscn")
+	"tower": preload("res://scenes/tower.tscn")
 }
 var slots = {}
 
@@ -41,6 +39,7 @@ func _on_slot_clicked(event, name):
 	if currentGold >= slots[name].cost and (currentGold - slots[name].cost) > 0:
 		currentGold -= slots[name].cost
 		self.get_parent().heldRoom = rooms[slots[name].room].instantiate()
+		
 		self.get_parent().add_child(self.get_parent().heldRoom)
 		self.get_parent().holdingRoom = true
 	else:
@@ -55,12 +54,5 @@ func _on_slot_2_input_event(viewport, event, shape_idx):
 func _on_slot_3_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed():
 		_on_slot_clicked(event, "Slot3")
-func _on_slot_4_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.is_pressed():
-		_on_slot_clicked(event, "Slot4")
-func _on_slot_5_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.is_pressed():
-		_on_slot_clicked(event, "Slot5")
-func _on_slot_6_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.is_pressed():
-		_on_slot_clicked(event, "Slot6")
+
+
