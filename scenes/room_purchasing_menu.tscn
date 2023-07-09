@@ -204,3 +204,6 @@ texture = ExtResource("8_62s3v")
 [connection signal="input_event" from="Slot1" to="." method="_on_slot_1_input_event"]
 [connection signal="input_event" from="Slot2" to="." method="_on_slot_2_input_event"]
 [connection signal="input_event" from="Slot3" to="." method="_on_slot_3_input_event"]
+[connection signal="input_event" from="Slot4" to="." method="_on_slot_4_input_event"]
+[connection signal="input_event" from="Slot5" to="." method="_on_slot_5_input_event"]
+[connection signal="input_event" from="Slot6" to="." method="_on_slot_6_input_event"]

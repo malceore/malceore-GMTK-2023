@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://03j6w867385c" path="res://sprites/cave.png" id="2_w1nni"]
 
 [node name="cave" instance=ExtResource("1_dx3pu")]
-secondsBetweenInterval = 8
+secondsBetweenInterval = 16
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_w1nni")

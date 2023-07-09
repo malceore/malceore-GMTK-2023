@@ -39,9 +39,11 @@ func timedAffect():
 
 func _on_affect_radius_area_entered(area):
 	if enabled:
-		pass # Replace with function body.
+		if name == "Spider Nest" and area.get_parent().get("move_speed") != null:
+			area.get_parent().move_speed = area.get_parent().move_speed/2
 
 func _on_affect_radius_area_exited(area):
 	if enabled:
-		pass # Replace with function body.
+		if name == "Spider Nest" and area.get_parent().get("move_speed") != null:
+			area.get_parent().move_speed = area.get_parent().move_speed*2
 
