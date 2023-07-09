@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://4klwniu6byip"]
+[gd_scene load_steps=10 format=3 uid="uid://4klwniu6byip"]
 
 [ext_resource type="PackedScene" uid="uid://bpc7gobu6kj8j" path="res://scenes/rows.tscn" id="1_28k0w"]
 [ext_resource type="Script" path="res://scripts/test_level.gd" id="1_vlejl"]
 [ext_resource type="Texture2D" uid="uid://dftowjd550ilf" path="res://sprites/background.png" id="2_3byw7"]
 [ext_resource type="PackedScene" uid="uid://dglnpuqp6qfxp" path="res://scenes/room_purchasing_menu.tscn" id="2_orvbb"]
+[ext_resource type="Texture2D" uid="uid://u662yy1q8uj5" path="res://sprites/gold_pile_1.png" id="4_biutf"]
 [ext_resource type="FontFile" uid="uid://ki3mx5xgoc23" path="res://fonts/dungeon_crawler_cb.ttf" id="4_vktw7"]
 [ext_resource type="AudioStream" uid="uid://d0ewgtnx58xai" path="res://sounds/DungeonLoopFinal.wav" id="5_5c0d2"]
 
@@ -25,20 +26,40 @@ visible = false
 position = Vector2(2, -130)
 scale = Vector2(1.8, 1.8)
 
+[node name="Sprite2D2" type="Sprite2D" parent="Row1"]
+position = Vector2(-281.667, 1.11111)
+scale = Vector2(0.555556, 0.555556)
+texture = ExtResource("4_biutf")
+
 [node name="Row2" parent="." instance=ExtResource("1_28k0w")]
 visible = false
 position = Vector2(2, 0)
 scale = Vector2(1.8, 1.8)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Row2"]
+position = Vector2(-281.667, -0.555556)
+scale = Vector2(0.555556, 0.555556)
+texture = ExtResource("4_biutf")
 
 [node name="Row3" parent="." instance=ExtResource("1_28k0w")]
 visible = false
 position = Vector2(2, 129)
 scale = Vector2(1.8, 1.8)
 
+[node name="Sprite2D3" type="Sprite2D" parent="Row3"]
+position = Vector2(-281.667, 1.66666)
+scale = Vector2(0.555556, 0.555556)
+texture = ExtResource("4_biutf")
+
 [node name="Row4" parent="." instance=ExtResource("1_28k0w")]
 visible = false
 position = Vector2(2, 258)
 scale = Vector2(1.8, 1.8)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Row4"]
+position = Vector2(-281.667, -1.66667)
+scale = Vector2(0.555556, 0.555556)
+texture = ExtResource("4_biutf")
 
 [node name="RoomPurchasingMenu" parent="." instance=ExtResource("2_orvbb")]
 position = Vector2(-1, -264)
@@ -66,7 +87,7 @@ shape = SubResource("RectangleShape2D_j8af6")
 position = Vector2(704, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MonsterCleaner"]
-position = Vector2(-28, 65)
+position = Vector2(-27, 65)
 shape = SubResource("RectangleShape2D_j8af6")
 
 [node name="HeroWaveTimer" type="Timer" parent="."]
@@ -90,7 +111,7 @@ text = "Level Name"
 [connection signal="money_update" from="." to="." method="_on_money_update"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="GoldCache" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="MonsterCleaner" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="MonsterCleaner" to="." method="_on_monster_cleaner_body_entered"]
+[connection signal="body_entered" from="MonsterCleaner" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="HeroWaveTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="DelayTimer" to="." method="_on_delay_timer_timeout"]
