@@ -44,6 +44,8 @@ func _on_slot_clicked(event, name):
 		
 		self.get_parent().add_child(self.get_parent().heldRoom)
 		self.get_parent().holdingRoom = true
+	else:
+		$noMoney.play()
 
 func _on_slot_1_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed():
