@@ -7,14 +7,15 @@ extends Node2D
 	{"cost": 6, "room": "tower"}, 
 	{"cost": 1, "room": "spider nest"}, 
 	{"cost": 0, "room": "labrynth"}, 
-	{"cost": 0, "room": "gold mine"}
+	{"cost": 2, "room": "gold mine"}
 ]
 var rooms = {
 	"default": preload("res://scenes/room.tscn"),
 	"cave": preload("res://scenes/cave.tscn"),
 	"crypt": preload("res://scenes/crypt.tscn"),
 	"tower": preload("res://scenes/tower.tscn"),
-	"spider nest": preload("res://scenes/spider_nest.tscn")
+	"spider nest": preload("res://scenes/spider_nest.tscn"),
+	"gold mine": preload("res://scenes/gold_mine.tscn")
 }
 var slots = {}
 

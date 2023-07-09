@@ -36,6 +36,9 @@ func timedAffect():
 		self.get_parent().get_parent().add_child(projectile)
 		projectile.global_position = global_position
 		projectile.fire()
+	if name == "Gold Mine":
+		self.get_parent().get_parent().money_update.emit(5)
+		print("Mining!")
 
 func _on_affect_radius_area_entered(area):
 	if enabled:
