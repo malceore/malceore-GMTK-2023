@@ -6,9 +6,10 @@ extends Node2D
 @export var levelTime = 90
 @onready var spawn_point_array = []
 
+
 func countdown():
 	levelTime -= 1
-	$LevelTimer.text = "Time left \n" + str(levelTime)
+	$levelTimerLabel.text = "Time left \n" + str(levelTime)
 	if levelTime == 0:
 		print("TimeStop")
 
@@ -39,7 +40,7 @@ func startHeroWave():
 	$HeroWaveTimer.wait_time = heroRate
 	$HeroWaveTimer.one_shot = false
 	$HeroWaveTimer.start()
-	$Timer.start()
+	$levelTimer.start()
 
 func _on_button_pressed():
 	startHeroWave()
