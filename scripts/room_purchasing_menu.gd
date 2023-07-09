@@ -41,7 +41,6 @@ func _on_slot_clicked(event, name):
 	if currentGold >= slots[name].cost and (currentGold - slots[name].cost) > 0:
 		currentGold -= slots[name].cost
 		self.get_parent().heldRoom = rooms[slots[name].room].instantiate()
-		
 		self.get_parent().add_child(self.get_parent().heldRoom)
 		self.get_parent().holdingRoom = true
 	else:
