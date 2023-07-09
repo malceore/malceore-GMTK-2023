@@ -99,6 +99,8 @@ offset_left = -181.0
 offset_top = 40.0
 offset_right = -8.0
 offset_bottom = 118.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
 text = "Spawns hulking trolls 
 every 16 seconds."
 
@@ -138,6 +140,8 @@ offset_left = -184.0
 offset_top = 40.0
 offset_right = -11.0
 offset_bottom = 118.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
 text = "Rapid fires thunderbolts
 that have weak damage."
 
@@ -177,6 +181,8 @@ offset_left = -180.0
 offset_top = 40.0
 offset_right = 9.0
 offset_bottom = 118.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
 text = "Slows enemies by 1/2
 and infrequently 
 spawns man-eating 
@@ -218,6 +224,8 @@ offset_left = -185.0
 offset_top = 40.0
 offset_right = 4.0
 offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
 text = "Slows enemies by
 1/4th as they become
 lost."
@@ -258,6 +266,8 @@ offset_left = -186.0
 offset_top = 40.0
 offset_right = 3.0
 offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("2_c7di3")
+theme_override_font_sizes/font_size = 12
 text = "Generates 1 gold piece
 a second."
 
