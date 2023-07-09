@@ -67,9 +67,9 @@ theme_override_fonts/font = ExtResource("1_3phtm")
 theme_override_font_sizes/font_size = 50
 text = "Level 3"
 
-[connection signal="pressed" from="Level1" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="Level2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Level1" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Level3" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]

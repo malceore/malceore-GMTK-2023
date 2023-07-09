@@ -14,3 +14,7 @@ config/name="Malceore-gmtk-2023"
 run/main_scene="res://scenes/startMenu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ScoreboardData="*res://ScoreboardData.gd"

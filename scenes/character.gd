@@ -35,6 +35,8 @@ func escape():
 func take_damage(damageAmount):
 	current_health -= damageAmount
 	if current_health <= 0:
+		if type == "hero":
+			get_node("/root/ScoreboardData").killCount += 1
 		if spawns_coin:
 			var coin_instance = coin.instantiate()
 			coin_instance.global_position = global_position
