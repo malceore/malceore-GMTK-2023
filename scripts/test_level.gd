@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var currentLevel = 0
 @export var startingGold = 0
 @export var heroRate = 3
 @export var numberOfRows = 2
@@ -32,9 +33,10 @@ func _ready():
 	$DelayTimer.wait_time = 10
 	$DelayTimer.one_shot = true
 	$DelayTimer.start()
+	get_node("/root/ScoreboardData").retryLevel = currentLevel
 
 func startHeroWave():
-	$HeroWaveTimer.wait_time = heroRate
+	$HeroWaveTimer.set_wait_time(heroRate)
 	$HeroWaveTimer.one_shot = false
 	$HeroWaveTimer.start()
 	$levelTimer.start()
@@ -58,7 +60,10 @@ func _on_area_2d_body_entered(body):
 		body.escape()
 		
 func _on_money_update(amount):
+	if amount < 0:
+		$DracoLich.TakeDamage()
 	$RoomPurchasingMenu.currentGold += amount
+	$RoomPurchasingMenu/GoldGainParticle.set_emitting(true)
 	if($RoomPurchasingMenu.currentGold < 1):
 		get_tree().change_scene_to_file("res://scenes/endGameScreen.tscn")
 
