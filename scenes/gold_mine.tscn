@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c0icqbfdl8wou" path="res://sprites/gold_mine.png" id="2_du0cp"]
 
 [node name="Gold Mine" instance=ExtResource("1_hmtvv")]
+cost = 1
 secondsBetweenInterval = 3
 
 [node name="Sprite2D" parent="." index="0"]

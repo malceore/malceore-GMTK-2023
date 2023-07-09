@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://fmr8ej6xbe35"]
+[gd_scene load_steps=3 format=3 uid="uid://fmr8ej6xbe35"]
 
 [ext_resource type="PackedScene" uid="uid://cj1hij85eajf6" path="res://scenes/monster.tscn" id="1_k0dix"]
+[ext_resource type="Texture2D" uid="uid://bg5qst3ohadej" path="res://sprites/spider.png" id="2_85rgh"]
 
 [node name="Character" instance=ExtResource("1_k0dix")]
 subtype = "spider"
 
-[node name="Timer" parent="." index="3"]
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_85rgh")
+
+[node name="Timer" parent="." index="5"]
 wait_time = 1.0

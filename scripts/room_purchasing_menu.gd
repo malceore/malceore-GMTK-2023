@@ -16,7 +16,7 @@ var rooms = {
 	"tower": preload("res://scenes/tower.tscn"),
 	"spider nest": preload("res://scenes/spider_nest.tscn"),
 	"gold mine": preload("res://scenes/gold_mine.tscn"),
-	"labyrinth": preload("res://scenes/gold_mine.tscn")
+	"labyrinth": preload("res://scenes/labyrinth.tscn")
 }
 var slots = {}
 
@@ -39,7 +39,7 @@ func _process(delta):
 		self.get_parent().heldRoom.global_position = get_global_mouse_position()
 
 func _on_slot_clicked(event, name):
-	if currentGold >= slots[name].cost and (currentGold - slots[name].cost) > 0:
+	if currentGold >= slots[name].cost and (currentGold - slots[name].cost) > 0 and self.get_parent().heldRoom == null:
 		currentGold -= slots[name].cost
 		self.get_parent().heldRoom = rooms[slots[name].room].instantiate()
 		self.get_parent().add_child(self.get_parent().heldRoom)
