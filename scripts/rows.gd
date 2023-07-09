@@ -12,7 +12,7 @@ func _on_area_clicked(event, name):
 	if areas[name] == null and self.get_parent().heldRoom != null:
 		var heldRoom = self.get_parent().heldRoom
 		self.get_parent().remove_child(heldRoom)
-		self.add_child(heldRoom)
+		self.find_child(name).add_child(heldRoom)
 		areas[name] = heldRoom
 		heldRoom.enable()
 		heldRoom.position = self.find_child(name).find_child("CollisionShape2D").position

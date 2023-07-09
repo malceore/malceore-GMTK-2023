@@ -3,7 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cj1hij85eajf6" path="res://scenes/monster.tscn" id="1_k0dix"]
 
 [node name="Character" instance=ExtResource("1_k0dix")]
+scale = Vector2(0.556, 0.556)
 subtype = "spider"
 
-[node name="Timer" parent="." index="3"]
+[node name="Timer" parent="." index="5"]
 wait_time = 1.0
