@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://sipuv4oucrif"]
 
-[ext_resource type="PackedScene" uid="uid://4klwniu6byip" path="res://scenes/level_template.tscn" id="1_1bgcc"]
+[ext_resource type="PackedScene" uid="uid://4klwniu6byip" path="res://scenes/test_level.tscn" id="1_1bgcc"]
 
 [node name="Level 3" instance=ExtResource("1_1bgcc")]
+currentLevel = 3
 startingGold = 15
 heroRate = 1
 numberOfRows = 4

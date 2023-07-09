@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://4klwniu6byip" path="res://scenes/test_level.tscn" id="1_ma514"]
 
 [node name="Level 2" instance=ExtResource("1_ma514")]
+currentLevel = 2
 startingGold = 10
 heroRate = 2
 numberOfRows = 3

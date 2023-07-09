@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var currentLevel = 0
 @export var startingGold = 0
 @export var heroRate = 3
 @export var numberOfRows = 2
@@ -32,6 +33,7 @@ func _ready():
 	$DelayTimer.wait_time = 10
 	$DelayTimer.one_shot = true
 	$DelayTimer.start()
+	get_node("/root/ScoreboardData").retryLevel = currentLevel
 
 func startHeroWave():
 	$HeroWaveTimer.wait_time = heroRate

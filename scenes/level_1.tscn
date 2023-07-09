@@ -3,4 +3,5 @@
 [ext_resource type="PackedScene" uid="uid://4klwniu6byip" path="res://scenes/test_level.tscn" id="1_fhe42"]
 
 [node name="Level 1" instance=ExtResource("1_fhe42")]
-startingGold = 100
+currentLevel = 1
+startingGold = 10
