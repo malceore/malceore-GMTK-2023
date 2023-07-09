@@ -14,6 +14,6 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	if body.has_method("take_damage"):
+	if body.type == "hero":
 		body.take_damage(50)
 		queue_free()
