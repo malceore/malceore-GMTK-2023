@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bg5qst3ohadej" path="res://sprites/spider.png" id="2_85rgh"]
 
 [node name="Character" instance=ExtResource("1_k0dix")]
+scale = Vector2(0.556, 0.556)
 subtype = "spider"
 
 [node name="Sprite2D" parent="." index="0"]

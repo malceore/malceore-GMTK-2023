@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://ki3mx5xgoc23" path="res://fonts/dungeon_crawler_cb.ttf" id="1_3phtm"]
 [ext_resource type="Script" path="res://scenes/startMenu.gd" id="1_7kgku"]
 [ext_resource type="Texture2D" uid="uid://dftowjd550ilf" path="res://sprites/background.png" id="2_8y8ks"]
-[ext_resource type="AudioStream" uid="uid://dr54xvqrbqmuv" path="res://sounds/DungeonIntroFinal.wav" id="2_e5afe"]
+[ext_resource type="AudioStream" uid="uid://cgpsdmfa2sryo" path="res://sounds/DungeonIntroFinal.wav" id="2_e5afe"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7kgku")
@@ -27,10 +27,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Subtitle" type="Label" parent="."]
-offset_left = 301.0
-offset_top = 368.0
-offset_right = 1392.0
-offset_bottom = 422.0
+offset_left = 284.0
+offset_top = 23.0
+offset_right = 1375.0
+offset_bottom = 77.0
 scale = Vector2(0.99794, 1)
 theme_override_fonts/font = ExtResource("1_3phtm")
 theme_override_font_sizes/font_size = 25
@@ -71,5 +71,5 @@ text = "Level 3"
 [connection signal="pressed" from="Level1" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="Level3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]

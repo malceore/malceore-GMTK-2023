@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b0xryhnej0xji" path="res://sprites/troll.png" id="2_7ypmj"]
 
 [node name="Character" instance=ExtResource("1_shruw")]
+scale = Vector2(0.556, 0.556)
 subtype = "troll"
 max_health = 200
 current_health = 200
