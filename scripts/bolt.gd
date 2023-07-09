@@ -12,5 +12,8 @@ func _process(delta):
 	if enabled:
 		position.x = position.x + (move_speed * direction) * delta
 
-func _on_area_2d_area_entered(area):
-	pass
+
+func _on_area_2d_body_entered(body):
+	if body.has_method("take_damage"):
+		body.take_damage(50)
+		queue_free()
