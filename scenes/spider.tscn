@@ -6,6 +6,9 @@
 [node name="Character" instance=ExtResource("1_k0dix")]
 scale = Vector2(0.556, 0.556)
 subtype = "spider"
+max_health = 50
+current_health = 50
+move_speed = 85
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_85rgh")

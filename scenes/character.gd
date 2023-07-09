@@ -20,11 +20,11 @@ var coin = preload("res://scenes/coin.tscn")
 var enemies_in_range = []
 
 func _ready():
-	$AnimationPlayer.play("idle")
+	$AnimationPlayer.play("walking")
 
 func _process(delta):
 	if(enemies_in_range.size() == 0):	
-		$AnimationPlayer.play("walk")
+		$AnimationPlayer.play("walking")
 		position.x = position.x + (move_speed * direction) * delta
 
 func attack_enemy():

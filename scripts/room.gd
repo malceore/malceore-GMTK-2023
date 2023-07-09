@@ -30,7 +30,7 @@ func timedAffect():
 	if name == "cave":
 		var monster = monsters["troll"].instantiate()
 		self.get_parent().get_parent().add_child(monster)
-		monster.scale = Vector2(2,2)
+		monster.scale = Vector2(1,1)
 		monster.global_position = global_position
 	if name == "Spider Nest":
 		var monster = monsters["spider"].instantiate()
