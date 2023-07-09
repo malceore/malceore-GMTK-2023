@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var currentGold = 10
+var oldGold = 10
 @export var costsAndContentsOfSlots = [
 	{"cost": 8, "room": "crypt"}, 
 	{"cost": 12, "room": "cave"}, 
@@ -31,10 +32,11 @@ func _ready():
 				child.find_child("CostLabel").text = " " 
 			slots[child.name] = costsAndContentsOfSlots[slotCount]
 			slotCount += 1
-	$GoldLabel.text = str(currentGold) + " GP"
+	updateGold(currentGold)
 
 func _process(delta):
 	$GoldLabel.text = str(currentGold) + " GP"
+	updateGold(currentGold)
 	if self.get_parent().holdingRoom:
 		self.get_parent().heldRoom.global_position = get_global_mouse_position()
 
@@ -46,6 +48,9 @@ func _on_slot_clicked(event, name):
 		self.get_parent().holdingRoom = true
 	else:
 		$noMoney.play()
+
+func updateGold(gold):
+	$GoldLabel.text = str(gold) + " GP"
 
 func _on_slot_1_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed():

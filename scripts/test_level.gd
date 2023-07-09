@@ -60,7 +60,10 @@ func _on_area_2d_body_entered(body):
 		body.escape()
 		
 func _on_money_update(amount):
+	if amount < 0:
+		$DracoLich.TakeDamage()
 	$RoomPurchasingMenu.currentGold += amount
+	$RoomPurchasingMenu/GoldGainParticle.set_emitting(true)
 	if($RoomPurchasingMenu.currentGold < 1):
 		get_tree().change_scene_to_file("res://scenes/endGameScreen.tscn")
 
