@@ -48,7 +48,7 @@ func _on_delay_timer_timeout():
 	startHeroWave()
 
 func _on_timer_timeout():
-	#$AnnouncementLabel.hide()
+	$Popup.hide()
 	var hero_instance = hero_array[rng.randi_range(0,2)].instantiate()
 	var spawner_count = spawn_point_array.size() - 1
 	hero_instance.global_position = spawn_point_array[rng.randi_range(0,spawner_count)]

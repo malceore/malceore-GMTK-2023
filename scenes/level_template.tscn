@@ -109,18 +109,18 @@ theme_override_font_sizes/font_size = 30
 text = "Level Name"
 
 [node name="Popup" type="Popup" parent="."]
-size = Vector2i(100, 108)
+title = "Announcement"
+initial_position = 1
+size = Vector2i(400, 103)
+visible = true
+borderless = false
 
-[node name="AnnouncementLabel" type="Label" parent="Popup"]
-offset_left = -460.0
-offset_top = -44.0
-offset_right = 432.0
-offset_bottom = 108.0
-theme_override_font_sizes/font_size = 25
-text = "Protect your gold from 
-dungeon delving heroes by 
-constructing obstacles.
- Survive until time runs out!"
+[node name="Label" type="Label" parent="Popup"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "
+Protect your gold from dungeon delving heroes by 
+constructing obstacles. Survive until time runs out!"
 horizontal_alignment = 1
 
 [connection signal="money_update" from="." to="." method="_on_money_update"]
