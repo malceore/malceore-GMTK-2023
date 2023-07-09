@@ -28,10 +28,13 @@ func timedAffect():
 		monster.global_position = global_position
 	if name == "cave":		
 		var monster = monsters["troll"].instantiate()
-		self.add_child(monster)
+		self.get_parent().get_parent().add_child(monster)
+		monster.scale = Vector2(2,2)
+		monster.global_position = global_position
 	if name == "tower":
 		var projectile = monsters["bolt"].instantiate()
-		self.add_child(projectile)
+		self.get_parent().get_parent().add_child(projectile)
+		projectile.global_position = global_position
 		projectile.fire()
 
 func _on_affect_radius_area_entered(area):

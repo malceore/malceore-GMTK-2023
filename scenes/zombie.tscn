@@ -5,9 +5,13 @@
 
 [node name="Character" instance=ExtResource("1_6s46t")]
 subtype = "zombie"
+max_health = 80
+current_health = 80
+damage = 15
+move_speed = 45
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_fqpl6")
 
-[node name="Timer" parent="." index="3"]
+[node name="Timer" parent="." index="5"]
 wait_time = 1.0

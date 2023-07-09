@@ -38,6 +38,7 @@ func take_damage(damageAmount):
 			var coin_instance = coin.instantiate()
 			coin_instance.global_position = global_position
 			get_parent().add_child(coin_instance)
+			coin_instance.scale = Vector2(2, 2)
 		queue_free()
 
 

@@ -5,10 +5,14 @@
 
 [node name="Character" instance=ExtResource("1_shruw")]
 subtype = "troll"
+max_health = 200
+current_health = 200
+damage = 25
+range = 5
 move_speed = 25
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_7ypmj")
 
-[node name="Timer" parent="." index="3"]
+[node name="Timer" parent="." index="5"]
 wait_time = 1.0
