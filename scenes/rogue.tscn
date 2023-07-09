@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dagephx2qj4an"]
 
 [ext_resource type="PackedScene" uid="uid://vyce285ucttd" path="res://scenes/hero.tscn" id="1_a7nj4"]
-[ext_resource type="Texture2D" uid="uid://dg36b71jm4mje" path="res://sprites/thief.png" id="2_xi7po"]
+[ext_resource type="Texture2D" uid="uid://yhwnnt0ron5f" path="res://sprites/thief.png" id="2_xi7po"]
 
 [node name="Character" instance=ExtResource("1_a7nj4")]
 subtype = "rogue"
