@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3allejo1tg28"]
+
+[ext_resource type="PackedScene" uid="uid://wbhiwvww8scm" path="res://scenes/endGameScreen.tscn" id="1_3afv3"]
+
+[node name="Node2D" instance=ExtResource("1_3afv3")]
+
+[node name="Title" parent="TitlePanel" index="0"]
+text = "VICTORY!"
+
+[node name="Subtitle" parent="StatsPanel" index="0"]
+text = "Congratulations!"
