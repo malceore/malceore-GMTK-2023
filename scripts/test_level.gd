@@ -3,7 +3,15 @@ extends Node2D
 @export var startingGold = 0
 @export var heroRate = 3
 @export var numberOfRows = 2
+@export var levelTime = 90
 @onready var spawn_point_array = []
+
+func countdown():
+	levelTime -= 1
+	$LevelTimer.text = "Time left \n" + str(levelTime)
+	if levelTime == 0:
+		print("TimeStop")
+
 var hero_array = [preload("res://scenes/fighter.tscn"),
 				  preload("res://scenes/mage.tscn"),
 				  preload("res://scenes/rogue.tscn")]
@@ -31,6 +39,7 @@ func startHeroWave():
 	$HeroWaveTimer.wait_time = heroRate
 	$HeroWaveTimer.one_shot = false
 	$HeroWaveTimer.start()
+	$Timer.start()
 	print("waves started")
 
 func _on_button_pressed():
@@ -56,3 +65,5 @@ func _on_money_update(amount):
 func _on_monster_cleaner_body_entered(body):
 	if(body.type == "monster"):
 		body.queue_free()
+
+
