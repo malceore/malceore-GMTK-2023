@@ -19,6 +19,8 @@ var coin = preload("res://scenes/coin.tscn")
 
 var enemies_in_range = []
 
+func _ready():
+	$AnimationPlayer.play("idle")
 
 func _process(delta):
 	if(enemies_in_range.size() == 0):	
@@ -48,7 +50,7 @@ func die():
 		coin_instance.global_position = global_position
 		get_parent().add_child(coin_instance)
 		coin_instance.scale = Vector2(2, 2)
-	$AnimationPlayer.("death")
+	$AnimationPlayer.play("death")
 	$Death.play()
 	await $Death.finished
 	queue_free()
@@ -59,14 +61,12 @@ func _on_attack_area_body_entered(body):
 			$Timer.start()
 		enemies_in_range.append(body)
 
-
 func _on_attack_area_body_exited(body):
 	var enemy_position = enemies_in_range.find(body)
 	if enemy_position > -1:
 		enemies_in_range.remove_at(enemy_position)
 	if enemies_in_range.size() == 0:
 		$Timer.stop
-
 
 func _on_timer_timeout():
 	attack_enemy()
