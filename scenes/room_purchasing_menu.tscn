@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dglnpuqp6qfxp"]
+[gd_scene load_steps=10 format=3 uid="uid://dglnpuqp6qfxp"]
 
 [ext_resource type="Script" path="res://scripts/room_purchasing_menu.gd" id="1_7s3hv"]
 [ext_resource type="Texture2D" uid="uid://1k6puiw5ybex" path="res://sprites/roomPurchasingMenu.png" id="1_pv7j0"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://03j6w867385c" path="res://sprites/cave.png" id="5_4omx6"]
 [ext_resource type="Texture2D" uid="uid://b7g0qv5aqqv8r" path="res://sprites/tower.png" id="6_tdwbp"]
 [ext_resource type="Texture2D" uid="uid://b2wdl3gpcggsg" path="res://sprites/spider_nest.png" id="7_i6ri8"]
+[ext_resource type="AudioStream" uid="uid://dic2oyehgwl70" path="res://sounds/captialism.wav" id="8_t50hl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swbdu"]
 size = Vector2(71, 65)
@@ -195,6 +196,9 @@ offset_bottom = 46.0
 theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 20
 text = "Gold"
+
+[node name="noMoney" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_t50hl")
 
 [connection signal="input_event" from="Slot1" to="." method="_on_slot_1_input_event"]
 [connection signal="input_event" from="Slot2" to="." method="_on_slot_2_input_event"]

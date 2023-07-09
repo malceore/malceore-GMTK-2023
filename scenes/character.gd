@@ -24,6 +24,7 @@ func _process(delta):
 		position.x = position.x + (move_speed * direction) * delta
 
 func attack_enemy():
+	$Attack.play()
 	if enemies_in_range.size() != 0:
 		enemies_in_range[0].take_damage(damage)
 
@@ -39,6 +40,8 @@ func take_damage(damageAmount):
 			coin_instance.global_position = global_position
 			get_parent().add_child(coin_instance)
 			coin_instance.scale = Vector2(2, 2)
+		$Death.play()
+		await $Death.finished
 		queue_free()
 
 
@@ -58,5 +61,4 @@ func _on_attack_area_body_exited(body):
 
 
 func _on_timer_timeout():
-	print("attack")
 	attack_enemy()
