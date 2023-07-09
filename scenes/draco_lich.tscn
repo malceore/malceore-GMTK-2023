@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://1wklhhflyqlj"]
+
+[ext_resource type="Script" path="res://scripts/DracoLich.gd" id="1_i5gmb"]
+
+[node name="DracoLich" type="Node2D"]
+script = ExtResource("1_i5gmb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="DamageParticle" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 20
+one_shot = true
+randomness = 0.15
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 146.1
+gravity = Vector2(0, 200)
+initial_velocity_max = 123.28
+scale_amount_min = 6.0
+scale_amount_max = 10.0
+color = Color(0.670588, 0.211765, 0.145098, 1)
