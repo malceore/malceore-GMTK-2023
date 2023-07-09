@@ -19,7 +19,7 @@ func _ready():
 			child.visible = true
 			spawn_point_array.append(child.find_child("hero_spawner").global_position)
 			numberOfRows -= 1
-	
+
 	$LevelLabel.set_text(self.name)
 	$RoomPurchasingMenu.currentGold = startingGold
 	# Time it takes for players to read our message

@@ -1,13 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://1q4cdqattdqp"]
 
 [ext_resource type="PackedScene" uid="uid://vyce285ucttd" path="res://scenes/hero.tscn" id="1_pwnox"]
-[ext_resource type="Texture2D" uid="uid://c0hk51216d111" path="res://sprites/mage.png" id="2_2b8ic"]
+[ext_resource type="Texture2D" uid="uid://cn0j5ygp37spc" path="res://sprites/mage.png" id="2_2b8ic"]
 
 [node name="Character" instance=ExtResource("1_pwnox")]
 subtype = "mage"
+max_health = 80
+current_health = 80
+range = 10
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_2b8ic")
 
-[node name="Timer" parent="." index="3"]
+[node name="Timer" parent="." index="5"]
 wait_time = 1.0
