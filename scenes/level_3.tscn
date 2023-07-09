@@ -5,6 +5,5 @@
 [node name="Level 3" instance=ExtResource("1_1bgcc")]
 currentLevel = 3
 startingGold = 20
-heroRate = 1
 numberOfRows = 4
 levelTime = 120

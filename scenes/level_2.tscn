@@ -5,6 +5,5 @@
 [node name="Level 2" instance=ExtResource("1_ma514")]
 currentLevel = 2
 startingGold = 15
-heroRate = 2
 numberOfRows = 3
 levelAnnouncementContents = "Watchout this dungeon has three rows to defend! Make sure to build enough Gold Mines."
