@@ -53,3 +53,7 @@ func _on_area_2d_body_entered(body):
 func _on_money_update(amount):
 	print("signal")
 	$RoomPurchasingMenu.currentGold += amount
+
+func _on_monster_cleaner_body_entered(body):
+	if(body.type == "monster"):
+		body.queue_free()
