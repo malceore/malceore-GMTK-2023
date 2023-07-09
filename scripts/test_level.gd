@@ -31,7 +31,6 @@ func startHeroWave():
 	$HeroWaveTimer.wait_time = heroRate
 	$HeroWaveTimer.one_shot = false
 	$HeroWaveTimer.start()
-	print("waves started")
 
 func _on_button_pressed():
 	startHeroWave()
