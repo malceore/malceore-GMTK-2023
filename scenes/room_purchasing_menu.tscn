@@ -51,6 +51,16 @@ theme_override_fonts/font = ExtResource("2_c7di3")
 theme_override_font_sizes/font_size = 12
 text = "Graveyard"
 
+[node name="tooltip" type="Label" parent="Slot1"]
+visible = false
+offset_left = -184.0
+offset_top = 40.0
+offset_right = -11.0
+offset_bottom = 118.0
+text = "Spawns Zombies that 
+chew on heroes, every 
+4 seconds."
+
 [node name="Slot2" type="Area2D" parent="."]
 position = Vector2(75, 0)
 
@@ -80,6 +90,15 @@ text = "Troll Cave"
 position = Vector2(-148, -4)
 scale = Vector2(0.965, 0.549)
 texture = ExtResource("5_4omx6")
+
+[node name="tooltip" type="Label" parent="Slot2"]
+visible = false
+offset_left = -181.0
+offset_top = 40.0
+offset_right = -8.0
+offset_bottom = 118.0
+text = "Spawns hulking trolls 
+every 16 seconds."
 
 [node name="Slot3" type="Area2D" parent="."]
 position = Vector2(148, 0)
@@ -111,6 +130,15 @@ position = Vector2(-148, -4)
 scale = Vector2(0.965, 0.549)
 texture = ExtResource("6_tdwbp")
 
+[node name="tooltip" type="Label" parent="Slot3"]
+visible = false
+offset_left = -184.0
+offset_top = 40.0
+offset_right = -11.0
+offset_bottom = 118.0
+text = "Rapid fires thunderbolts
+that have weak damage."
+
 [node name="Slot4" type="Area2D" parent="."]
 position = Vector2(222, 0)
 
@@ -140,6 +168,17 @@ text = "Spider Nest"
 position = Vector2(-148, -4)
 scale = Vector2(0.965, 0.549)
 texture = ExtResource("7_i6ri8")
+
+[node name="tooltip" type="Label" parent="Slot4"]
+visible = false
+offset_left = -180.0
+offset_top = 40.0
+offset_right = 9.0
+offset_bottom = 118.0
+text = "Slows enemies by 1/2
+and infrequently 
+spawns man-eating 
+spiders."
 
 [node name="Slot5" type="Area2D" parent="."]
 position = Vector2(296, 0)
@@ -171,6 +210,16 @@ position = Vector2(-147, -5)
 scale = Vector2(0.929688, 0.460937)
 texture = ExtResource("8_my6k3")
 
+[node name="tooltip" type="Label" parent="Slot5"]
+visible = false
+offset_left = -185.0
+offset_top = 40.0
+offset_right = 4.0
+offset_bottom = 144.0
+text = "Slows enemies by
+1/4th as they become
+lost."
+
 [node name="Slot6" type="Area2D" parent="."]
 position = Vector2(371, 0)
 
@@ -201,6 +250,15 @@ position = Vector2(-150, -3)
 scale = Vector2(0.921875, 0.5)
 texture = ExtResource("9_kil5j")
 
+[node name="tooltip" type="Label" parent="Slot6"]
+visible = false
+offset_left = -186.0
+offset_top = 40.0
+offset_right = 3.0
+offset_bottom = 144.0
+text = "Generates 1 gold piece
+a second."
+
 [node name="GoldLabel" type="Label" parent="."]
 offset_left = -246.0
 offset_top = 17.0
@@ -217,9 +275,23 @@ texture = ExtResource("8_4tq5m")
 [node name="noMoney" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_t50hl")
 
+[connection signal="area_entered" from="Slot1" to="." method="_on_slot_1_area_entered"]
+[connection signal="area_exited" from="Slot1" to="." method="_on_slot_1_area_exited"]
 [connection signal="input_event" from="Slot1" to="." method="_on_slot_1_input_event"]
+[connection signal="mouse_entered" from="Slot1" to="." method="_on_slot_1_mouse_entered"]
+[connection signal="mouse_exited" from="Slot1" to="." method="_on_slot_1_mouse_exited"]
 [connection signal="input_event" from="Slot2" to="." method="_on_slot_2_input_event"]
+[connection signal="mouse_entered" from="Slot2" to="." method="_on_slot_2_mouse_entered"]
+[connection signal="mouse_exited" from="Slot2" to="." method="_on_slot_2_mouse_exited"]
 [connection signal="input_event" from="Slot3" to="." method="_on_slot_3_input_event"]
+[connection signal="mouse_entered" from="Slot3" to="." method="_on_slot_3_mouse_entered"]
+[connection signal="mouse_exited" from="Slot3" to="." method="_on_slot_3_mouse_exited"]
 [connection signal="input_event" from="Slot4" to="." method="_on_slot_4_input_event"]
+[connection signal="mouse_entered" from="Slot4" to="." method="_on_slot_4_mouse_entered"]
+[connection signal="mouse_exited" from="Slot4" to="." method="_on_slot_4_mouse_exited"]
 [connection signal="input_event" from="Slot5" to="." method="_on_slot_5_input_event"]
+[connection signal="mouse_entered" from="Slot5" to="." method="_on_slot_5_mouse_entered"]
+[connection signal="mouse_exited" from="Slot5" to="." method="_on_slot_5_mouse_exited"]
 [connection signal="input_event" from="Slot6" to="." method="_on_slot_6_input_event"]
+[connection signal="mouse_entered" from="Slot6" to="." method="_on_slot_6_mouse_entered"]
+[connection signal="mouse_exited" from="Slot6" to="." method="_on_slot_6_mouse_exited"]

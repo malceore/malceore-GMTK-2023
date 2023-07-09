@@ -65,3 +65,33 @@ func _on_slot_5_input_event(viewport, event, shape_idx):
 func _on_slot_6_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed():
 		_on_slot_clicked(event, "Slot6")
+
+func show_tooltip(tooltip):
+	tooltip.show()
+func hide_tooltip(tooltip):
+	tooltip.hide()
+
+func _on_slot_1_mouse_entered():
+	show_tooltip(self.find_child("Slot1").find_child("tooltip"))
+func _on_slot_1_mouse_exited():
+	hide_tooltip(self.find_child("Slot1").find_child("tooltip"))
+func _on_slot_2_mouse_entered():
+	show_tooltip(self.find_child("Slot2").find_child("tooltip"))
+func _on_slot_2_mouse_exited():
+	hide_tooltip(self.find_child("Slot2").find_child("tooltip"))
+func _on_slot_3_mouse_entered():
+	show_tooltip(self.find_child("Slot3").find_child("tooltip"))
+func _on_slot_3_mouse_exited():
+	hide_tooltip(self.find_child("Slot3").find_child("tooltip"))
+func _on_slot_4_mouse_entered():
+	show_tooltip(self.find_child("Slot4").find_child("tooltip"))
+func _on_slot_4_mouse_exited():
+	hide_tooltip(self.find_child("Slot4").find_child("tooltip"))	
+func _on_slot_5_mouse_entered():
+	show_tooltip(self.find_child("Slot5").find_child("tooltip"))
+func _on_slot_5_mouse_exited():
+	hide_tooltip(self.find_child("Slot5").find_child("tooltip"))
+func _on_slot_6_mouse_exited():
+	hide_tooltip(self.find_child("Slot6").find_child("tooltip"))
+func _on_slot_6_mouse_entered():
+	show_tooltip(self.find_child("Slot6").find_child("tooltip"))
