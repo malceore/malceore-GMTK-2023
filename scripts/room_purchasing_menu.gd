@@ -1,14 +1,13 @@
 extends Node2D
 
 @export var currentGold = 10
-var oldGold = 10
 @export var costsAndContentsOfSlots = [
-	{"cost": 8, "room": "crypt"}, 
-	{"cost": 12, "room": "cave"}, 
-	{"cost": 6, "room": "tower"}, 
-	{"cost": 1, "room": "spider nest"}, 
+	{"cost": 5, "room": "crypt"}, 
+	{"cost": 10, "room": "cave"}, 
+	{"cost": 3, "room": "tower"}, 
+	{"cost": 4, "room": "spider nest"}, 
 	{"cost": 2, "room": "labyrinth"}, 
-	{"cost": 2, "room": "gold mine"}
+	{"cost": 4, "room": "gold mine"}
 ]
 var rooms = {
 	"default": preload("res://scenes/room.tscn"),
