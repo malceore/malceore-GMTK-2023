@@ -9,7 +9,7 @@
 size = Vector2(65, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r02sv"]
-size = Vector2(124, 64)
+size = Vector2(72, 55)
 
 [sub_resource type="Animation" id="Animation_vdwqo"]
 length = 0.001
@@ -217,6 +217,7 @@ shape = SubResource("RectangleShape2D_0ko0n")
 [node name="AttackArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_r02sv")
 
 [node name="Death" type="AudioStreamPlayer" parent="."]

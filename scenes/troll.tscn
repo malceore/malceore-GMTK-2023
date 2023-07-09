@@ -15,5 +15,8 @@ move_speed = 25
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_7ypmj")
 
+[node name="CollisionShape2D" parent="AttackArea" index="0"]
+position = Vector2(0, 0)
+
 [node name="Timer" parent="." index="5"]
 wait_time = 1.0
