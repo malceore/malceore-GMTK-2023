@@ -41,35 +41,47 @@ stream = ExtResource("2_e5afe")
 autoplay = true
 
 [node name="Level1" type="Button" parent="."]
-offset_left = 465.0
-offset_top = 416.0
-offset_right = 644.0
-offset_bottom = 475.0
+offset_left = 467.0
+offset_top = 367.0
+offset_right = 646.0
+offset_bottom = 426.0
 theme_override_fonts/font = ExtResource("1_3phtm")
 theme_override_font_sizes/font_size = 50
-text = "Level 1"
+text = "Level 1 "
 
 [node name="Level2" type="Button" parent="."]
-offset_left = 465.0
-offset_top = 495.0
-offset_right = 654.0
-offset_bottom = 554.0
+offset_left = 467.0
+offset_top = 440.0
+offset_right = 656.0
+offset_bottom = 499.0
 theme_override_fonts/font = ExtResource("1_3phtm")
 theme_override_font_sizes/font_size = 50
 text = "Level 2"
 
 [node name="Level3" type="Button" parent="."]
-offset_left = 465.0
-offset_top = 572.0
-offset_right = 654.0
-offset_bottom = 631.0
+offset_left = 467.0
+offset_top = 512.0
+offset_right = 656.0
+offset_bottom = 571.0
 theme_override_fonts/font = ExtResource("1_3phtm")
 theme_override_font_sizes/font_size = 50
 text = "Level 3"
 
-[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
+[node name="Level4" type="Button" parent="."]
+offset_left = 469.0
+offset_top = 585.0
+offset_right = 658.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("1_3phtm")
+theme_override_font_sizes/font_size = 50
+text = "Level 4"
+
 [connection signal="pressed" from="Level1" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="Level3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Level4" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Level4" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Level4" to="." method="_on_level_4_pressed"]
