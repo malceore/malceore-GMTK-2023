@@ -7,7 +7,6 @@
 subtype = "rogue"
 attack_speed = 10
 move_speed = 75
-greed = 5
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_xi7po")

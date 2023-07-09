@@ -1,15 +1,73 @@
-[gd_scene load_steps=2 format=3 uid="uid://1wklhhflyqlj"]
+[gd_scene load_steps=7 format=3 uid="uid://1wklhhflyqlj"]
 
 [ext_resource type="Script" path="res://scripts/DracoLich.gd" id="1_i5gmb"]
+[ext_resource type="Texture2D" uid="uid://dn4p5a2vn6104" path="res://sprites/Dracolich_Portrait.png" id="2_mxkrk"]
+
+[sub_resource type="Animation" id="Animation_ybqep"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 0]
+}
+
+[sub_resource type="Animation" id="Animation_y5tce"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_qmep7"]
+resource_name = "damaged"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j2u0t"]
+_data = {
+"RESET": SubResource("Animation_y5tce"),
+"damaged": SubResource("Animation_qmep7"),
+"idle": SubResource("Animation_ybqep")
+}
 
 [node name="DracoLich" type="Node2D"]
 script = ExtResource("1_i5gmb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("2_mxkrk")
+hframes = 2
 
 [node name="DamageParticle" type="CPUParticles2D" parent="."]
 emitting = false
-amount = 20
+amount = 15
+lifetime = 0.8
 one_shot = true
 randomness = 0.15
 emission_shape = 1
@@ -20,3 +78,8 @@ initial_velocity_max = 123.28
 scale_amount_min = 6.0
 scale_amount_max = 10.0
 color = Color(0.670588, 0.211765, 0.145098, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j2u0t")
+}
